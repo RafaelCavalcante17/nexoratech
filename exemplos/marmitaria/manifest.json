@@ -1,0 +1,16 @@
+{
+  "name": "Marmita Leve",
+  "short_name": "Marmita Leve",
+  "description": "Marmitas fitness e comida saudável. Peça pela internet e receba em casa.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#256B3E",
+  "theme_color": "#256B3E",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
