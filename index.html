@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://nexortechs.com/">
+<title>Nexora Tech — sistema de pedidos no WhatsApp pro seu comércio</title>
+<meta name="description" content="Eu monto o site de pedidos do seu negócio. O cliente escolhe pelo celular e o pedido cai direto no seu WhatsApp — sem aplicativo, sem mensalidade de plataforma e sem comissão. Veja 17 sistemas reais funcionando.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0D1117">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Seu comércio recebendo pedidos no WhatsApp — sem app, sem comissão">
+<meta property="og:description" content="Eu monto o site de pedidos do seu negócio. Veja 17 sistemas reais funcionando.">
+<meta property="og:image" content="https://nexortechs.com/og.jpg">
+<meta property="og:locale" content="pt_BR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0D1117; --paper:#161B22; --cream:#11161F; --card:#161B22;
+  --line:#232B38; --line2:#2E3648;
+  --ink:#F5F7FA; --ink2:#B7C0D1; --dim:#7C8699;
+  --red:#6A00FF; --redd:#5400CC; --gold:#00D4FF; --green:#25D366; --greenk:#0E9F53;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background-image:radial-gradient(1000px 520px at 88% -8%,rgba(106,0,255,.16),transparent 60%),radial-gradient(760px 520px at -8% 6%,rgba(0,212,255,.10),transparent 55%)}
+img,video{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.06;letter-spacing:-.01em}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.grad{background:linear-gradient(92deg,var(--red),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.eye{display:inline-flex;align-items:center;gap:8px;font-family:'Inter';font-size:12.5px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;color:var(--red);border:1px solid var(--line2);background:var(--paper);padding:7px 13px;border-radius:999px}
+.btn-wa{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--green);color:#04371c;font-weight:800;font-size:16px;padding:16px 26px;border-radius:14px;box-shadow:0 12px 26px rgba(37,211,102,.30);transition:.15s}
+.btn-wa:hover{filter:brightness(1.05);transform:translateY(-1px)}
+.btn-wa svg{width:22px;height:22px;fill:#04371c}
+.btn-out{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--line2);background:var(--paper);color:var(--ink);font-weight:600;font-size:15px;padding:14px 22px;border-radius:13px;transition:.15s}
+.btn-out:hover{background:var(--cream)}
+section{padding:64px 0}
+.lead{font-size:17px;color:var(--ink2)}
+@media(min-width:820px){.lead{font-size:19px}}
+
+/* TOPBAR */
+.top{position:sticky;top:0;z-index:50;background:rgba(13,17,23,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:9px;font-family:'Fraunces';font-weight:700;font-size:20px;color:var(--ink)}
+.brand .dot{width:30px;height:30px;border-radius:9px;background:linear-gradient(150deg,var(--red),var(--gold));display:flex;align-items:center;justify-content:center}
+.brand .dot svg{width:17px;height:17px;fill:#fff}
+.top .btn-wa{padding:10px 16px;font-size:14px;box-shadow:none}
+@media(max-width:600px){.top .btn-wa{display:none}}
+
+/* HERO */
+.hero{padding:44px 0 40px;position:relative}
+.hero-in{display:grid;gap:32px}
+@media(min-width:900px){.hero-in{grid-template-columns:1.08fr .92fr;align-items:center;gap:24px}}
+.hero h1{font-size:36px;font-weight:600;margin:18px 0 16px}
+@media(min-width:820px){.hero h1{font-size:56px}}
+.hero .sub{font-size:17px;color:var(--ink2);max-width:36ch}
+@media(min-width:820px){.hero .sub{font-size:20px}}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-trust{margin-top:18px;font-size:13.5px;color:var(--dim)}
+.hero-trust b{color:var(--ink)}
+.phone{justify-self:center;width:min(300px,80vw);border:11px solid #241612;border-radius:40px;overflow:hidden;background:#000;
+  box-shadow:0 30px 60px rgba(120,50,20,.22),0 0 0 1px rgba(0,0,0,.04);position:relative}
+.phone video{width:100%;display:block}
+.phone::after{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:22px;background:#241612;border-radius:0 0 14px 14px}
+.phone-glow{position:absolute;inset:-46px;z-index:-1;background:radial-gradient(circle,rgba(106,0,255,.20),transparent 66%);filter:blur(34px)}
+
+/* SECTION TITLES */
+.stitle{font-size:29px;font-weight:600;max-width:20ch;color:var(--ink)}
+@media(min-width:820px){.stitle{font-size:42px}}
+.skicker{color:var(--red);font-family:'Inter';font-weight:700;font-size:13px;letter-spacing:.4px;text-transform:uppercase;margin-bottom:12px}
+
+/* alt bg */
+.alt{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+/* PROBLEM */
+.prob p{font-size:18px;color:var(--ink2);max-width:60ch;margin-top:16px}
+@media(min-width:820px){.prob p{font-size:20px}}
+.hit{color:var(--red);font-weight:700}
+.contra{font-family:'Fraunces';font-weight:600;font-size:23px;margin-top:26px;color:var(--ink)}
+@media(min-width:820px){.contra{font-size:30px}}
+
+/* STEPS */
+.steps{display:grid;gap:16px;margin-top:34px}
+@media(min-width:760px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 8px 26px rgba(0,0,0,.35)}
+.step .n{width:42px;height:42px;border-radius:12px;background:linear-gradient(150deg,var(--red),var(--gold));color:#fff;font-family:'Fraunces';font-weight:700;font-size:21px;display:flex;align-items:center;justify-content:center}
+.step h3{font-size:20px;margin:16px 0 8px;color:var(--ink)}
+.step p{font-size:15px;color:var(--ink2)}
+.solnote{margin-top:26px;font-size:16px;color:var(--ink)}
+.solnote b{color:var(--red)}
+
+/* PORTFOLIO */
+.pgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:32px}
+@media(min-width:680px){.pgrid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:980px){.pgrid{grid-template-columns:repeat(4,1fr)}}
+.demo{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:.18s;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.demo:hover{transform:translateY(-3px);border-color:var(--red);box-shadow:0 16px 34px rgba(106,0,255,.25)}
+.demo .thumb{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--cream)}
+.demo .thumb img{width:100%;height:100%;object-fit:cover;object-position:top}
+.demo .thumb .tag{position:absolute;left:8px;top:8px;background:rgba(13,17,23,.78);backdrop-filter:blur(4px);color:#fff;font-size:11px;font-weight:700;padding:4px 9px;border-radius:999px}
+.demo .b{padding:12px 13px;display:flex;flex-direction:column;gap:4px;flex:1}
+.demo .b h4{font-family:'Fraunces';font-size:15.5px;font-weight:600;color:var(--ink)}
+.demo .b .go{margin-top:auto;font-size:12.5px;font-weight:700;color:var(--red)}
+.pnote{text-align:center;color:var(--dim);font-size:15px;margin-top:26px}
+
+/* BENEFITS */
+.bgrid{display:grid;gap:14px;margin-top:32px}
+@media(min-width:720px){.bgrid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1000px){.bgrid{grid-template-columns:repeat(3,1fr)}}
+.ben{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:22px 24px}
+.ben h3{font-size:17px;margin-bottom:6px;display:flex;align-items:center;gap:10px;color:var(--ink)}
+.ben h3 i{width:22px;height:22px;border-radius:7px;background:rgba(37,211,102,.16);flex:none;position:relative}
+.ben h3 i::after{content:"";position:absolute;left:7px;top:5px;width:5px;height:9px;border:solid var(--greenk);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.ben p{font-size:14.5px;color:var(--ink2)}
+
+/* NICHES */
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}
+.chip{border:1px solid var(--line2);background:var(--paper);color:var(--ink2);padding:9px 15px;border-radius:999px;font-size:14px;font-weight:600}
+
+/* OFFER */
+.offer{background:linear-gradient(160deg,rgba(106,0,255,.14),var(--cream));border:1px solid var(--line2);border-radius:26px;padding:44px 26px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.4)}
+@media(min-width:820px){.offer{padding:60px 40px}}
+.offer h2{font-size:29px;font-weight:600;color:var(--ink)}
+@media(min-width:820px){.offer h2{font-size:40px}}
+.offer p{color:var(--ink2);font-size:17px;max-width:56ch;margin:16px auto 0}
+.offer .btn-wa{margin-top:28px}
+.offer .fine{margin-top:14px;font-size:13px;color:var(--dim)}
+
+/* FAQ */
+.faq{max-width:760px;margin:32px auto 0}
+.qa{border-bottom:1px solid var(--line2);padding:20px 0}
+.qa h4{font-family:'Fraunces';font-size:18px;font-weight:600;margin-bottom:8px;color:var(--ink)}
+.qa p{color:var(--ink2);font-size:15px}
+
+footer{border-top:1px solid var(--line);padding:34px 0;text-align:center;color:var(--dim);font-size:13.5px}
+footer b{color:var(--ink2)}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(13,17,23,.92);backdrop-filter:blur(8px);border-top:1px solid var(--line2);display:none}
+.sticky .btn-wa{width:100%;padding:15px}
+@media(max-width:760px){.sticky{display:block} body{padding-bottom:84px}}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="top">
+  <div class="top-in">
+    <a href="#" class="brand"><span class="dot"><svg viewBox="0 0 24 24"><path d="M4 4h16v3H4zM4 10.5h16v3H4zM4 17h11v3H4z"/></svg></span>Nexora Tech</a>
+    <a class="btn-wa" href="#" onclick="return wa(event)">Pedir orçamento</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <span class="eye">Sistema de pedidos no WhatsApp</span>
+      <h1>Seu cliente pede pelo celular e cai <span class="grad">direto no seu WhatsApp</span>. Sem app, sem mensalidade, sem comissão.</h1>
+      <p class="sub">Eu monto o site de pedidos do seu negócio. O cliente escolhe, monta o pedido e envia. Você recebe tudo organizado, confirma e vende.</p>
+      <div class="hero-cta">
+        <a class="btn-wa" href="#" onclick="return wa(event)">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.5 1.8 1 .9 1.8 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.8.9c.2.1.4.2.4.3.1.1.1.6-.1 1.1Z"/></svg>
+          Quero um orçamento
+        </a>
+        <a class="btn-out" href="#exemplos">Ver exemplos funcionando</a>
+      </div>
+      <p class="hero-trust">Funciona pra <b>qualquer comércio</b>: restaurante, lanchonete, barbearia, petshop, loja e mais.</p>
+    </div>
+    <div class="phone">
+      <div class="phone-glow"></div>
+      <video src="assets/hero.mp4" autoplay muted loop playsinline></video>
+    </div>
+  </div>
+</header>
+
+<!-- PROBLEMA -->
+<section class="alt prob">
+  <div class="wrap">
+    <div class="skicker">O que te consome todo mês</div>
+    <h2 class="stitle">Você vende, trabalha… e boa parte do lucro escorre pelo ralo.</h2>
+    <p>O aplicativo fica com <span class="hit">20% a 30% de cada pedido</span>. Quando não é o app, é o WhatsApp lotado: cliente perguntando preço, print de cardápio desatualizado, pedido trocado, endereço perdido no meio da conversa.</p>
+    <p>No fim do dia você atende no sufoco e ainda paga caro pra vender aquilo que já é seu.</p>
+    <p class="contra">O problema não é o seu produto. É o seu <span class="grad">jeito de receber pedido</span>.</p>
+  </div>
+</section>
+
+<!-- CAUSA -->
+<section>
+  <div class="wrap">
+    <div class="skicker">A raiz de tudo</div>
+    <h2 class="stitle">Falta um canal de vendas que seja <span class="grad">seu</span>.</h2>
+    <p class="lead" style="max-width:62ch;margin-top:18px">Enquanto o pedido passa pelo aplicativo ou pela bagunça do WhatsApp, o cliente é do app — não é seu. Você não tem o cardápio no ar, não tem os pedidos organizados, não tem a lista dos seus próprios clientes. Cada venda depende de alguém digitando na mão.</p>
+    <p class="contra" style="margin-top:22px">Em outras palavras: falta um <span class="grad">sistema</span>.</p>
+  </div>
+</section>
+
+<!-- SOLUÇÃO -->
+<section class="alt">
+  <div class="wrap">
+    <div class="skicker">A solução</div>
+    <h2 class="stitle">Ter o seu próprio sistema de pedidos.</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h3>O cliente abre o link</h3><p>Vê o seu cardápio com foto e preço, no celular, e monta o pedido sozinho — do jeito que ele quer.</p></div>
+      <div class="step"><div class="n">2</div><h3>Escolhe e envia</h3><p>Entrega ou retirada, forma de pagamento, observações. Ele confere o total e envia com um toque.</p></div>
+      <div class="step"><div class="n">3</div><h3>Cai no seu WhatsApp</h3><p>O pedido chega pronto e organizado. Você só confirma e faz. Sem erro, sem digitar nada na mão.</p></div>
+    </div>
+    <p class="solnote">Sem aplicativo pra baixar. Sem comissão. Sem mensalidade de plataforma. E o cliente ainda <b>salva o seu negócio na tela do celular</b> e volta com um toque.</p>
+  </div>
+</section>
+
+<!-- EXEMPLOS / PROVA -->
+<section id="exemplos">
+  <div class="wrap">
+    <div class="skicker">Prova, não promessa</div>
+    <h2 class="stitle">Veja funcionando. Estes são sistemas <span class="grad">reais, no ar agora</span>.</h2>
+    <p class="lead" style="max-width:60ch;margin-top:16px">Abra qualquer um, monte um pedido e veja como o seu cliente vai usar. O pedido chega no WhatsApp de verdade.</p>
+    <div class="pgrid" id="pgrid"></div>
+    <p class="pnote">Não achou o seu ramo? O mesmo sistema se adapta a praticamente qualquer comércio.</p>
+  </div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="alt">
+  <div class="wrap">
+    <div class="skicker">Por que é melhor que o aplicativo</div>
+    <h2 class="stitle">O sistema é seu. E trabalha por você.</h2>
+    <div class="bgrid">
+      <div class="ben"><h3><i></i>Sem comissão</h3><p>Cada real que você vende fica com você. Nada de repassar 30% pra ninguém.</p></div>
+      <div class="ben"><h3><i></i>Sem mensalidade de plataforma</h3><p>O sistema é do seu negócio, não é aluguel de aplicativo.</p></div>
+      <div class="ben"><h3><i></i>Pedido organizado</h3><p>Chega pronto no WhatsApp: itens, endereço, pagamento. Acabou o pedido trocado.</p></div>
+      <div class="ben"><h3><i></i>Vira app no celular do cliente</h3><p>Ele salva na tela inicial e volta a pedir com um toque.</p></div>
+      <div class="ben"><h3><i></i>Aumenta o ticket sozinho</h3><p>Sugere bebida, adicional e combo na hora do pedido. Vende mais sem você pedir.</p></div>
+      <div class="ben"><h3><i></i>No ar rápido</h3><p>Em poucos dias o seu negócio está recebendo pedido online.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRA QUEM SERVE -->
+<section>
+  <div class="wrap">
+    <div class="skicker">Serve pro seu negócio?</div>
+    <h2 class="stitle">Se o seu cliente pede, marca ou compra — serve.</h2>
+    <div class="chips" id="chips"></div>
+  </div>
+</section>
+
+<!-- OFERTA / CTA -->
+<section id="orcamento" class="alt">
+  <div class="wrap">
+    <div class="offer">
+      <h2>Vamos montar o sistema do <span class="grad">seu negócio</span>.</h2>
+      <p>Você me chama no WhatsApp e me conta do seu comércio. Eu monto o sistema com a sua cara — o seu cardápio, as suas fotos, o seu número. O valor a gente combina na conversa, de acordo com o seu caso.</p>
+      <a class="btn-wa" href="#" onclick="return wa(event)">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.5 1.8 1 .9 1.8 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.8.9c.2.1.4.2.4.3.1.1.1.6-.1 1.1Z"/></svg>
+        Pedir meu orçamento no WhatsApp
+      </a>
+      <p class="fine">Sem compromisso. Resposta rápida, de pessoa pra pessoa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="skicker">Perguntas rápidas</div>
+    <h2 class="stitle">O que costuma passar pela cabeça.</h2>
+    <div class="faq">
+      <div class="qa"><h4>Meu cliente precisa baixar algum aplicativo?</h4><p>Não. Ele abre o link no navegador ou no WhatsApp e já pede. Nada pra instalar.</p></div>
+      <div class="qa"><h4>Serve pro meu tipo de negócio?</h4><p>Quase sempre sim. Tem exemplo de comida, serviço, loja, reserva e agendamento aqui em cima. O sistema se molda ao seu.</p></div>
+      <div class="qa"><h4>Quanto custa?</h4><p>Depende do seu caso — tamanho do cardápio, o que você precisa. A gente combina o valor na conversa, sem enrolação.</p></div>
+      <div class="qa"><h4>Em quanto tempo fica pronto?</h4><p>Poucos dias. Você me passa as informações e as fotos, eu monto e te entrego funcionando.</p></div>
+      <div class="qa"><h4>E se eu quiser mudar o cardápio ou os preços depois?</h4><p>Tranquilo. É o seu sistema — dá pra ajustar sempre que precisar.</p></div>
+      <div class="qa"><h4>Os pedidos chegam mesmo no meu WhatsApp?</h4><p>Chegam. Abre qualquer exemplo, monte um pedido e veja a mensagem sendo montada pra enviar.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="alt">
+  <div class="wrap" style="text-align:center">
+    <h2 class="stitle" style="margin:0 auto">O seu concorrente vai ter isso. <span class="grad">Melhor que seja você primeiro.</span></h2>
+    <div style="margin-top:28px">
+      <a class="btn-wa" href="#" onclick="return wa(event)">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.5 1.8 1 .9 1.8 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.8.9c.2.1.4.2.4.3.1.1.1.6-.1 1.1Z"/></svg>
+        Quero o sistema do meu negócio
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap"><b>Nexora Tech</b> · sistema de pedidos no WhatsApp para o seu comércio · o cliente pede, você recebe organizado e vende.</div></footer>
+
+<div class="sticky">
+  <a class="btn-wa" href="#" onclick="return wa(event)">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.5 1.8 1 .9 1.8 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.8.9c.2.1.4.2.4.3.1.1.1.6-.1 1.1Z"/></svg>
+    Pedir meu orçamento
+  </a>
+</div>
+
+<script>
+const WHATSAPP="5588921809463";
+const MSG="Oi! Vi a página do Nexora Tech e quero um orçamento de um site de pedidos pro meu negócio.";
+function wa(e){ if(e)e.preventDefault(); window.open(`https://wa.me/${WHATSAPP}?text=`+encodeURIComponent(MSG),"_blank"); return false; }
+const DEMOS=[
+ ["pizzaria","Pizzaria","Bella Massa"],["hamburgueria","Hamburgueria","Bendito Burger"],
+ ["pastelaria","Pastelaria","Império do Pastel"],["marmitaria","Marmitaria fit","Marmita Leve"],
+ ["hortifruti","Hortifruti","Quintal Hortifruti"],["distribuidora","Distribuidora","Gelada Express"],
+ ["barbearia","Barbearia","Dom Rocha"],["salao","Salão","Studio Bella Hair"],
+ ["studio-unhas","Studio de unhas","Esmalteria Charme"],["petshop","Petshop","Pet Amigo"],
+ ["dentista","Dentista","Sorriso Odonto"],["personal","Personal","Corpo em Foco"],
+ ["quadra-society","Quadra society","Arena Gol de Placa"],["loja-roupa","Loja de roupa","Boutique Lila"],
+ ["materiais-construcao","Materiais","ConstruBem"],["pousada","Pousada","Recanto Verde"],
+ ["aluguel-festa","Aluguel de festa","Festa & Alegria"],
+];
+document.getElementById("pgrid").innerHTML=DEMOS.map(([s,nic,nom])=>`
+  <a class="demo" href="exemplos/${s}/" target="_blank" rel="noopener">
+    <div class="thumb"><img loading="lazy" src="exemplos/_thumb/${s}.webp" alt="${nom}"><span class="tag">${nic}</span></div>
+    <div class="b"><h4>${nom}</h4><span class="go">Ver funcionando →</span></div>
+  </a>`).join("");
+document.getElementById("chips").innerHTML=["Restaurante","Pizzaria","Hamburgueria","Pastelaria","Marmitaria","Hortifruti","Distribuidora de bebidas","Barbearia","Salão","Studio de unhas","Petshop","Dentista","Personal trainer","Loja de roupa","Materiais de construção","Pousada","Quadra society","Aluguel de festa","e o seu também"].map(n=>`<span class="chip">${n}</span>`).join("");
+</script>
+</body>
+</html>
