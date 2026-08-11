@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base href="./">
+<title>Sorriso Odonto — Clínica Odontológica | Agende sua avaliação</title>
+<meta name="description" content="Clínica odontológica em Bela Vista do Sul. Agende sua avaliação gratuita pela internet: limpeza, clareamento, aparelho, implante e mais. Atendimento humano e estrutura moderna.">
+<meta name="keywords" content="dentista, clínica odontológica, agendar dentista, avaliação gratuita, clareamento dental, limpeza, aparelho ortodôntico, implante dentário, Sorriso Odonto">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://SEU-DOMINIO.com.br/">
+<meta name="geo.region" content="BR-SP">
+<meta name="geo.placename" content="Bela Vista do Sul">
+
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2F7DB5">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sorriso Odonto">
+<meta property="og:title" content="Sorriso Odonto — Clínica Odontológica">
+<meta property="og:description" content="Agende sua avaliação gratuita pela internet. Limpeza, clareamento, aparelho, implante e mais, com atendimento humano.">
+<meta property="og:url" content="https://SEU-DOMINIO.com.br/">
+<meta property="og:image" content="https://SEU-DOMINIO.com.br/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://SEU-DOMINIO.com.br/og.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF6FA; --card:#FFFFFF; --paper:#FFFFFF;
+  --blue:#2F7DB5; --blue-deep:#215A85; --cyan:#35BFC4; --cyan-deep:#2AA1A6;
+  --ink:#223038; --ink-soft:#6C7C86; --line:#DCEAF2; --mint:#EAF6F6;
+  --green:#25D366; --amber:#E8A33D; --shadow:0 8px 26px rgba(33,90,133,.12); --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(1100px 480px at 50% -8%,#f5fbfd,transparent 70%);
+  -webkit-font-smoothing:antialiased;padding-bottom:96px}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select,textarea{font-family:inherit}
+h1,h2,h3,.disp{font-family:'Poppins',system-ui,sans-serif}
+
+/* HERO */
+.hero{position:relative;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:#123143}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.4}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(33,90,133,.5),rgba(20,49,67,.92))}
+.hero-in{position:relative;max-width:960px;margin:0 auto;padding:20px 16px 22px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand .logo{width:60px;height:60px;border-radius:16px;border:2px solid rgba(255,255,255,.3);box-shadow:var(--shadow)}
+.brand h1{font-size:32px;line-height:.95;font-weight:700}
+.brand .tg{font-size:12.5px;color:#bfe3f0;font-weight:500;margin-top:4px;font-family:'Inter'}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);
+  padding:6px 11px;border-radius:999px;font-size:12.5px;font-weight:500}
+.chip.status-open{background:rgba(53,191,196,.30);border-color:rgba(120,224,224,.45)}
+.chip.status-closed{background:rgba(0,0,0,.26)}
+.chip a{color:#fff;text-decoration:none}
+.dot{width:8px;height:8px;border-radius:50%}
+.dot.on{background:#5fe0dc;box-shadow:0 0 0 0 rgba(95,224,220,.6);animation:pulse 1.8s infinite}
+.dot.off{background:#e6a23c}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(95,224,220,0)}100%{box-shadow:0 0 0 0 rgba(95,224,220,0)}}
+.hero-cta{margin-top:16px;display:flex;gap:9px;flex-wrap:wrap}
+.hero-cta a{background:var(--cyan);color:#06363a;font-weight:700;font-size:13.5px;padding:11px 18px;border-radius:12px;text-decoration:none;box-shadow:var(--shadow)}
+.hero-cta a.ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.28)}
+.repeat{margin-top:14px;display:none;width:100%;background:#fff;color:var(--blue-deep);font-weight:700;
+  padding:12px;border-radius:12px;font-size:14px;box-shadow:var(--shadow)}
+.repeat b{color:var(--ink)}
+
+.closed-banner{background:var(--amber);color:#3a2408;font-size:13px;font-weight:600;text-align:center;padding:9px 14px;display:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 4px 14px rgba(33,90,133,.05)}
+.nav-in{max-width:960px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;padding:11px 14px;scrollbar-width:none}
+.nav-in::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap;font-size:13px;font-weight:600;color:var(--ink-soft);padding:7px 14px;border-radius:999px;
+  background:var(--mint);border:1px solid var(--line);transition:.15s;text-decoration:none}
+.nav a.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+main{max-width:960px;margin:0 auto;padding:6px 14px 40px}
+.sec{padding-top:22px;scroll-margin-top:62px}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin:6px 2px 14px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+.sec-h h2{font-size:23px;color:var(--blue-deep)}
+.sec-h .sub{font-size:12.5px;color:var(--ink-soft)}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+
+.card{display:flex;gap:13px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px;box-shadow:var(--shadow)}
+.card .thumb{width:104px;height:104px;flex:none;border-radius:12px;object-fit:cover;background:var(--mint);border:1px solid var(--line)}
+.card .ni{width:104px;height:104px;flex:none;border-radius:12px;background:var(--mint);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:42px}
+.card .txt{flex:1;min-width:0;display:flex;flex-direction:column}
+.card h3{font-family:'Inter';font-size:15.5px;font-weight:700;line-height:1.2}
+.card .desc{font-size:12.5px;color:var(--ink-soft);line-height:1.4;margin-top:4px;flex:1}
+.card .bot{display:flex;align-items:center;justify-content:space-between;margin-top:9px;gap:8px}
+.price{font-family:'Poppins';font-size:16px;font-weight:700;color:var(--blue-deep)}
+.price small{font-family:'Inter';font-weight:500;font-size:11px;color:var(--ink-soft);display:block;margin-bottom:-2px}
+.price.free{color:var(--cyan-deep)}
+.add{background:var(--blue);color:#fff;font-weight:700;font-size:13px;padding:9px 16px;border-radius:10px;flex:none;white-space:nowrap;transition:.15s}
+.add:hover{background:var(--blue-deep)}.add:active{transform:scale(.95)}
+.add.sel{background:var(--cyan-deep)}
+.simple .card .thumb,.simple .card .ni{display:none}
+
+/* FEATURED (avaliação grátis) */
+.feat{grid-column:1/-1;position:relative;background:linear-gradient(120deg,#2F7DB5,#35BFC4);color:#fff;border:none;padding:18px 18px;overflow:hidden}
+.feat::after{content:"";position:absolute;right:-30px;top:-30px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.12)}
+.feat .rib{display:inline-block;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.35);font-size:11px;font-weight:700;
+  letter-spacing:.4px;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:8px}
+.feat h3{font-family:'Poppins';font-size:20px;font-weight:700;color:#fff}
+.feat p{font-size:13px;color:#eaf9fb;line-height:1.45;margin-top:5px;max-width:70%}
+.feat .fb{display:flex;align-items:center;justify-content:space-between;margin-top:14px;gap:10px}
+.feat .fp{font-family:'Poppins';font-size:22px;font-weight:700}
+.feat .fp small{font-size:12px;font-weight:500;opacity:.85}
+.feat .add{background:#fff;color:var(--blue-deep)}
+.feat .add.sel{background:#06363a;color:#fff}
+@media(max-width:520px){.feat p{max-width:100%}}
+
+/* FAB */
+.fab{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:60;width:min(92%,540px);
+  background:var(--blue);color:#fff;border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 10px 30px rgba(33,90,133,.42);transition:.2s;font-weight:700}
+.fab:active{transform:translateX(-50%) scale(.98)}
+.fab.hide{transform:translateX(-50%) translateY(140%)}
+.fab .c-count{background:#fff;color:var(--blue);border-radius:8px;padding:3px 9px;font-size:13px;margin-right:10px}
+.fab .c-total{font-family:'Poppins';font-size:15px}
+
+/* OVERLAY + SHEET */
+.overlay{position:fixed;inset:0;background:rgba(15,40,55,.5);z-index:70;opacity:0;pointer-events:none;transition:.2s}
+.overlay.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--paper);border-radius:20px 20px 0 0;max-height:93vh;
+  display:flex;flex-direction:column;transform:translateY(100%);transition:transform .28s cubic-bezier(.3,.8,.3,1)}
+.sheet.on{transform:translateY(0)}
+@media(min-width:620px){.sheet{left:50%;right:auto;transform:translate(-50%,100%);width:520px;border-radius:20px 20px 0 0}.sheet.on{transform:translate(-50%,0)}}
+.sh-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 12px;border-bottom:1px solid var(--line)}
+.sh-head h2{font-size:19px;color:var(--blue-deep)}
+.sh-close{font-size:26px;color:var(--ink-soft);width:34px;height:34px}
+.sh-body{overflow-y:auto;padding:6px 18px 10px}
+.sh-foot{padding:14px 18px calc(16px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--paper)}
+
+/* MODAL PROC */
+.pz-img{width:100%;height:170px;object-fit:cover;border-radius:14px;margin:8px 0 4px}
+.pz-desc{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-bottom:6px}
+.pz-price{font-family:'Poppins';font-size:20px;font-weight:700;color:var(--blue-deep);margin:6px 0 2px}
+.pz-price.free{color:var(--cyan-deep)}
+.pz-price small{font-size:12px;font-weight:500;color:var(--ink-soft)}
+.opt-group{margin-top:16px}
+.opt-group>label{display:block;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:8px;color:var(--ink)}
+.obs-in{width:100%;margin-top:0;font-size:13px;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--mint)}
+.obs-in:focus,input:focus,select:focus,textarea:focus{outline:none;border-color:var(--cyan)}
+.pz-add{width:100%;background:var(--blue);color:#fff;font-weight:700;font-size:16px;padding:15px;border-radius:13px;display:flex;justify-content:center;gap:8px;align-items:center}
+.pz-add:active{transform:scale(.99)}
+.pz-add.sel{background:var(--cyan-deep)}
+.sug-row{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+.sug-row::-webkit-scrollbar{display:none}
+.sug-chip{white-space:nowrap;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 11px;font-size:12.5px;font-weight:600}
+.sug-chip b{color:var(--blue)}
+.sug-chip:active{transform:scale(.96)}
+
+/* SELECTION (consulta) */
+.citem{display:flex;gap:11px;padding:13px 0;border-bottom:1px solid var(--line);align-items:center}
+.citem img,.citem .ni{width:50px;height:50px;border-radius:10px;object-fit:cover;flex:none;background:var(--mint);display:flex;align-items:center;justify-content:center;font-size:24px}
+.citem .ci-t{flex:1;min-width:0}
+.citem .ci-t h4{font-size:14px;font-weight:700}
+.citem .ci-t .cfg{font-size:12px;color:var(--ink-soft);margin-top:2px;line-height:1.35}
+.citem .lp{font-family:'Poppins';font-weight:700;font-size:13.5px;color:var(--blue-deep);white-space:nowrap}
+.citem .rm{color:var(--ink-soft);font-size:20px;width:30px;height:30px;flex:none}
+.suggest{background:var(--mint);border:1px dashed var(--cyan);border-radius:12px;padding:11px 13px;margin:12px 0 2px;font-size:13px}
+.suggest b{color:var(--blue-deep)}
+.nudge{background:#fff6ea;border:1px solid #f0dcae;border-radius:12px;padding:11px 13px;margin:0 0 4px;font-size:12.5px;color:#7a5a10;font-weight:600}
+.nudge b{color:var(--amber)}
+.empty{text-align:center;color:var(--ink-soft);padding:46px 20px;font-size:14px}
+.empty .em{font-size:42px;margin-bottom:8px}
+
+/* DATE + TIME */
+.field{margin-top:16px}
+.field>label{display:block;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:8px;color:var(--ink)}
+.date-row{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.date-row::-webkit-scrollbar{display:none}
+.dcell{flex:none;width:62px;border:1.5px solid var(--line);border-radius:12px;padding:9px 4px;text-align:center;background:var(--paper);transition:.15s}
+.dcell .dw{font-size:10.5px;font-weight:600;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.3px}
+.dcell .dd{font-family:'Poppins';font-size:19px;font-weight:700;line-height:1.1;margin-top:1px}
+.dcell .dm{font-size:10px;color:var(--ink-soft)}
+.dcell.sel{border-color:var(--blue);background:#e9f3fa;box-shadow:0 0 0 2px rgba(47,125,181,.14)}
+.slot-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.slot{border:1.5px solid var(--line);border-radius:11px;padding:11px 6px;font-size:14px;font-weight:600;background:var(--paper);text-align:center;transition:.15s}
+.slot.sel{border-color:var(--cyan);background:var(--mint);color:var(--cyan-deep);box-shadow:0 0 0 2px rgba(53,191,196,.16)}
+input.txt,select.txt,textarea.txt{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 13px;font-size:14px;background:var(--paper)}
+textarea.txt{resize:vertical;min-height:64px}
+.sumrow{display:flex;justify-content:space-between;font-size:13.5px;margin:5px 0;color:var(--ink-soft)}
+.totrow{display:flex;justify-content:space-between;align-items:baseline;margin:8px 0 12px;padding-top:10px;border-top:1px solid var(--line)}
+.totrow .tv{font-family:'Poppins';font-size:16px;font-weight:700;color:var(--blue-deep)}
+.send{width:100%;background:var(--green);color:#063c1e;font-weight:700;font-size:16px;padding:15px;border-radius:13px;display:flex;align-items:center;justify-content:center;gap:9px}
+.send:active{transform:scale(.99)}.send:disabled{background:#c7d3d9;color:#fff}
+.send svg{width:20px;height:20px;fill:#063c1e}
+.hint{font-size:11.5px;color:var(--ink-soft);margin-top:8px;line-height:1.45}
+
+/* CONFIANÇA */
+.trust{max-width:960px;margin:26px auto 0;padding:0 14px}
+.trust-h{text-align:center;margin-bottom:16px}
+.trust-h h2{font-size:22px;color:var(--blue-deep)}
+.trust-h p{font-size:13px;color:var(--ink-soft);margin-top:5px}
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(min-width:620px){.trust-grid{grid-template-columns:repeat(4,1fr)}}
+.tcard{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px;box-shadow:var(--shadow);text-align:center}
+.tcard .ic{font-size:26px;margin-bottom:6px}
+.tcard h4{font-family:'Poppins';font-size:14px;color:var(--blue-deep)}
+.tcard p{font-size:12px;color:var(--ink-soft);margin-top:4px;line-height:1.4}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.gallery img{width:100%;height:120px;object-fit:cover;border-radius:14px;border:1px solid var(--line)}
+@media(max-width:520px){.gallery img{height:96px}}
+
+.sobre{max-width:840px;margin:26px auto 0;padding:24px 20px 4px}
+.sobre h2{font-size:20px;color:var(--blue-deep);margin-bottom:10px}
+.sobre p{font-size:13.5px;color:var(--ink-soft);line-height:1.7;margin-bottom:10px}
+.sobre b{color:var(--ink);font-weight:600}
+footer{background:var(--blue-deep);color:#cfe6f2;text-align:center;padding:24px 18px 34px;font-size:12.5px;line-height:1.7;margin-top:20px}
+footer b{color:#fff}
+footer .fb{font-family:'Poppins';font-size:20px;color:#fff;margin-bottom:6px}
+.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(20px);z-index:90;background:var(--ink);color:#fff;
+  padding:11px 18px;border-radius:12px;font-size:13.5px;font-weight:600;opacity:0;pointer-events:none;transition:.25s;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:90%}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+.pwa{position:fixed;left:50%;transform:translateX(-50%);bottom:88px;z-index:55;width:min(92%,540px);display:none;
+  background:var(--ink);color:#fff;border-radius:12px;padding:11px 14px;align-items:center;gap:10px;font-size:13px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.pwa b{font-weight:700}
+.pwa .in{flex:1}
+.pwa button{background:var(--cyan);color:#06363a;font-weight:700;border-radius:9px;padding:8px 12px;font-size:13px}
+.pwa .x{background:none;color:#bbb;padding:4px 8px;font-size:18px}
+
+/* fix: formulario longo (endereco/data) deixava o botao de enviar fora da tela */
+.sh-body{flex:0 1 auto;min-height:0;overflow-y:auto;max-height:34vh}
+.sh-foot{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.sh-foot .send{position:sticky;bottom:0;z-index:3;box-shadow:0 -10px 20px rgba(0,0,0,.18)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-bg"><img src="img/hero-clinica.webp" alt="Consultório odontológico moderno"></div>
+  <div class="hero-in">
+    <div class="brand">
+      <img class="logo" src="apple-touch-icon.png" alt="Sorriso Odonto">
+      <div>
+        <h1>Sorriso Odonto</h1>
+        <div class="tg">Clínica odontológica · avaliação gratuita</div>
+      </div>
+    </div>
+    <div class="meta" id="meta"></div>
+    <div class="hero-cta">
+      <a href="#" onclick="startAgendar(event)">Agendar avaliação gratuita</a>
+      <a class="ghost" id="mapsBtn" href="#" target="_blank" rel="noopener">Como chegar</a>
+    </div>
+    <button class="repeat" id="repeatBtn" onclick="repeatLast()"></button>
+  </div>
+</header>
+<div class="closed-banner" id="closedBanner"></div>
+
+<nav class="nav"><div class="nav-in" id="nav"></div></nav>
+<main id="menu"></main>
+
+<section class="trust" id="estrutura">
+  <div class="trust-h">
+    <h2>Por que a Sorriso Odonto</h2>
+    <p>Estrutura moderna, equipe especialista e um atendimento que acolhe.</p>
+  </div>
+  <div class="trust-grid">
+    <div class="tcard"><div class="ic">🦷</div><h4>Avaliação gratuita</h4><p>Seu diagnóstico e plano de tratamento sem custo.</p></div>
+    <div class="tcard"><div class="ic">👩‍⚕️</div><h4>Equipe especialista</h4><p>Clínicos e especialistas em ortodontia, implante e estética.</p></div>
+    <div class="tcard"><div class="ic">🧼</div><h4>Biossegurança</h4><p>Rigorosos protocolos de esterilização em cada atendimento.</p></div>
+    <div class="tcard"><div class="ic">💳</div><h4>Facilidade no pagamento</h4><p>Convênios aceitos e parcelamento dos tratamentos.</p></div>
+  </div>
+  <div class="gallery">
+    <img loading="lazy" src="img/estrutura-consultorio.webp" alt="Consultório equipado">
+    <img loading="lazy" src="img/equipe-dentista.webp" alt="Dentista atendendo paciente">
+    <img loading="lazy" src="img/sorriso-saudavel.webp" alt="Sorriso saudável">
+  </div>
+</section>
+
+<section class="sobre">
+  <h2>Sobre a Sorriso Odonto</h2>
+  <p>A <b>Sorriso Odonto</b> nasceu com um propósito simples: fazer você cuidar da saúde bucal sem medo e sem burocracia. Aqui a sua primeira <b>avaliação é gratuita</b> — a gente examina, explica o que precisa e monta um plano de tratamento transparente, no seu tempo e no seu bolso.</p>
+  <p>São mais de 10 anos cuidando de sorrisos em <b>Bela Vista do Sul</b>, com estrutura moderna, equipe especializada e protocolos rígidos de biossegurança. Da <b>limpeza</b> ao <b>implante</b>, do <b>clareamento</b> ao <b>aparelho</b>, agende pela internet e escolha o melhor dia e horário — sem ficar no telefone.</p>
+</section>
+
+<footer>
+  <div class="fb">Sorriso Odonto</div>
+  <span id="footAddr"></span><br>
+  <b>Seg a Sex</b> 8h–18h · <b>Sáb</b> 8h–12h · Avaliação gratuita<br>
+  <span style="opacity:.7">Agendamento feito pelo site</span>
+</footer>
+
+<button class="fab hide" id="fab" onclick="openCart()">
+  <span><span class="c-count" id="fabCount">0</span>Minha consulta</span>
+  <span><span class="c-total" id="fabTotal">Agendar</span> →</span>
+</button>
+
+<div class="pwa" id="pwaBar">
+  <div class="in"><b>Instale a Sorriso Odonto</b> no seu celular — vira um app, 1 toque pra agendar.</div>
+  <button onclick="installPWA()">Instalar</button>
+  <button class="x" onclick="document.getElementById('pwaBar').style.display='none'">×</button>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeAll()"></div>
+
+<div class="sheet" id="sheet">
+  <div class="sh-head"><h2 id="shTitle"></h2><button class="sh-close" onclick="closeAll()">×</button></div>
+  <div class="sh-body" id="shBody"></div>
+  <div class="sh-foot" id="shFoot"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ===================== CONFIG ===================== */
+const CONFIG = {
+  nome: "Sorriso Odonto",
+  whatsapp: "SEU_WHATSAPP",               // WhatsApp da clínica (só dígitos, 55 + DDD)
+  endereco: "Av. das Acácias, 480 — Centro, Bela Vista do Sul/SP",
+  maps: "https://maps.google.com/?q=Av+das+Acacias+480+Centro+Bela+Vista+do+Sul",
+  // Seg=1..Sex=5 → 8h-18h ; Sáb=6 → 8h-12h ; Dom=0 fechado
+  horario: {
+    1:{abre:"08:00",fecha:"18:00"}, 2:{abre:"08:00",fecha:"18:00"}, 3:{abre:"08:00",fecha:"18:00"},
+    4:{abre:"08:00",fecha:"18:00"}, 5:{abre:"08:00",fecha:"18:00"}, 6:{abre:"08:00",fecha:"12:00"}
+  },
+  diasAgenda: 14,                          // janela de dias pra escolher a data
+  slotsSemana: ["08:00","09:00","10:00","11:00","14:00","15:00","16:00","17:00"],
+  slotsSabado: ["08:00","09:00","10:00","11:00"],
+  convenios: ["Particular","Amil Dental","Bradesco Dental","SulAmérica Odonto","Odontoprev","Porto Seguro","Outro"],
+};
+
+/* ===================== PROCEDIMENTOS ===================== */
+// tipo de preço: gratis | aval (sob avaliação) | from (a partir de) | fixo
+const MENU = [
+ {cat:"Comece por aqui", key:"inicio", sub:"sua porta de entrada", items:[
+   {id:"avaliacao", n:"Avaliação odontológica", d:"Exame completo, diagnóstico e plano de tratamento. Sem compromisso.", tipo:"gratis", p:0, img:"sorriso-saudavel", featured:true},
+   {id:"limpeza", n:"Limpeza / Profilaxia", d:"Remoção de placa e tártaro, polimento e aplicação de flúor.", tipo:"fixo", p:120, img:"limpeza-profilaxia"},
+ ]},
+ {cat:"Estética", key:"estetica", sub:"seu sorriso mais bonito", items:[
+   {id:"clareamento", n:"Clareamento dental", d:"Dentes visivelmente mais brancos com técnica segura e supervisionada.", tipo:"from", p:600, img:"clareamento-dental"},
+   {id:"restauracao", n:"Restauração", d:"Reparo de cáries e reconstrução do dente com resina estética.", tipo:"from", p:200},
+   {id:"protese", n:"Prótese dentária", d:"Reposição de dentes com próteses fixas ou removíveis sob medida.", tipo:"from", p:800},
+ ]},
+ {cat:"Tratamentos", key:"tratamentos", sub:"saúde e função", items:[
+   {id:"canal", n:"Tratamento de canal", d:"Endodontia para salvar o dente e acabar com a dor com conforto.", tipo:"from", p:500},
+   {id:"extracao", n:"Extração", d:"Remoção segura de dentes comprometidos ou sisos.", tipo:"from", p:180},
+   {id:"aparelho", n:"Aparelho ortodôntico", d:"Correção do alinhamento e da mordida. Avaliação ortodôntica gratuita.", tipo:"aval", p:0, img:"aparelho-ortodontico"},
+   {id:"implante", n:"Implante dentário", d:"Reposição de raiz e dente com implante. Avaliação para planejamento.", tipo:"aval", p:0, img:"implante-dentario"},
+ ]},
+];
+const EMOJI = {inicio:"🦷", estetica:"✨", tratamentos:"🩺"};
+
+const ALL={}; MENU.forEach(c=>c.items.forEach(i=>{i.cat=c.cat;i.catKey=c.key;ALL[i.id]=i}));
+const brl=v=>"R$ "+v.toFixed(2).replace(".",",");
+function precoLabel(it){
+  if(it.tipo==="gratis") return `<span class="price free"><small>Primeira consulta</small>Gratuita</span>`;
+  if(it.tipo==="aval")   return `<span class="price"><small>Sob avaliação</small>Avaliação grátis</span>`;
+  if(it.tipo==="from")   return `<span class="price"><small>a partir de</small>${brl(it.p)}</span>`;
+  return `<span class="price">${brl(it.p)}</span>`;
+}
+function precoTexto(it){
+  if(it.tipo==="gratis") return "Gratuita";
+  if(it.tipo==="aval")   return "sob avaliação";
+  if(it.tipo==="from")   return "a partir de "+brl(it.p);
+  return brl(it.p);
+}
+
+/* ===================== ESTADO ===================== */
+let cart=[];   // procedimentos selecionados: {id, obs}
+let order={data:"", dataLabel:"", hora:"", nome:"", tel:"", convenio:"", obs:""};
+let modal={item:null, obs:""};
+
+/* ===================== HORÁRIO DA CLÍNICA ===================== */
+function statusLoja(){
+  const now=new Date(); const dia=now.getDay();
+  const h=CONFIG.horario[dia];
+  const min=now.getHours()*60+now.getMinutes();
+  let aberto=false;
+  if(h){ const [ah,am]=h.abre.split(":").map(Number); const [fh,fm]=h.fecha.split(":").map(Number);
+    aberto = min>=ah*60+am && min<fh*60+fm; }
+  let proximo="";
+  if(!aberto){
+    for(let i=0;i<8;i++){ const d=(dia+i)%7; const hd=CONFIG.horario[d]; if(!hd)continue;
+      const [ah,am]=hd.abre.split(":").map(Number);
+      if(i===0 && min<ah*60+am){ proximo="hoje às "+hd.abre; break; }
+      if(i===0) continue;
+      proximo=(i===1?"amanhã":["dom","seg","ter","qua","qui","sex","sáb"][d])+" às "+hd.abre; break;
+    }
+  }
+  return {aberto, proximo};
+}
+
+/* ===================== RENDER TOPO ===================== */
+function renderMeta(){
+  const s=statusLoja();
+  document.getElementById("meta").innerHTML=`
+    <span class="chip ${s.aberto?'status-open':'status-closed'}"><span class="dot ${s.aberto?'on':'off'}"></span>${s.aberto?'Aberto agora':'Fechado'}</span>
+    <span class="chip"><a href="${CONFIG.maps}" target="_blank" rel="noopener">📍 Como chegar</a></span>
+    <span class="chip">🕐 Seg–Sex 8h–18h · Sáb 8h–12h</span>`;
+  document.getElementById("footAddr").textContent="📍 "+CONFIG.endereco;
+  document.getElementById("mapsBtn").href=CONFIG.maps;
+  const cb=document.getElementById("closedBanner");
+  if(!s.aberto){ cb.style.display="block"; cb.textContent="Estamos fechados agora. Abrimos "+(s.proximo||"em breve")+". Você pode escolher data e horário e enviar seu agendamento mesmo assim."; }
+  else cb.style.display="none";
+}
+
+/* ===================== RENDER CATÁLOGO ===================== */
+function render(){
+  const nav=document.getElementById("nav"), menu=document.getElementById("menu");
+  nav.innerHTML=""; menu.innerHTML="";
+  MENU.forEach((c,i)=>{
+    const cid="cat-"+c.key;
+    const a=document.createElement("a"); a.href="#"+cid; a.textContent=c.cat; a.dataset.cid=cid;
+    if(i===0)a.classList.add("active"); nav.appendChild(a);
+    const sec=document.createElement("section"); sec.className="sec"; sec.id=cid;
+    sec.innerHTML=`<div class="sec-h"><h2>${c.cat}</h2>${c.sub?`<span class="sub">${c.sub}</span>`:""}</div>`;
+    const g=document.createElement("div"); g.className="grid";
+    c.items.forEach(it=>g.appendChild(cardEl(it)));
+    sec.appendChild(g); menu.appendChild(sec);
+  });
+  syncCards();
+}
+function cardEl(it){
+  const el=document.createElement("div");
+  el.id="card-"+it.id;
+  if(it.featured){
+    el.className="card feat";
+    el.innerHTML=`<div style="position:relative;z-index:1;width:100%">
+      <span class="rib">Grátis · sem compromisso</span>
+      <h3>${it.n}</h3>
+      <p>${it.d}</p>
+      <div class="fb"><span class="fp">Gratuita<small> · primeira consulta</small></span><span id="act-${it.id}"></span></div>
+    </div>`;
+    return el;
+  }
+  el.className="card";
+  const thumb=it.img?`<img class="thumb" loading="lazy" src="img/${it.img}.webp" alt="${it.n}">`:`<div class="ni">${EMOJI[it.catKey]||"🦷"}</div>`;
+  el.innerHTML=`${thumb}<div class="txt"><h3>${it.n}</h3><div class="desc">${it.d||""}</div>
+    <div class="bot">${precoLabel(it)}<span id="act-${it.id}"></span></div></div>`;
+  return el;
+}
+function actEl(it){
+  const sel=cart.some(l=>l.id===it.id);
+  if(sel) return `<button class="add sel" onclick="removeProc('${it.id}')">Selecionado ✓</button>`;
+  const txt = it.tipo==="gratis" ? "Agendar" : "Selecionar";
+  return `<button class="add" onclick="openProc('${it.id}')">${txt}</button>`;
+}
+function syncCards(){ MENU.forEach(c=>c.items.forEach(it=>{const s=document.getElementById("act-"+it.id); if(s)s.innerHTML=actEl(it);})); }
+
+/* ===================== MODAL PROCEDIMENTO ===================== */
+function openProc(id){
+  const it=ALL[id]; modal={item:it, obs:""};
+  document.getElementById("shTitle").textContent=it.n;
+  renderProc(); openSheet("proc");
+}
+function renderProc(){
+  const it=modal.item;
+  const body=document.getElementById("shBody");
+  const priceCls = (it.tipo==="gratis"||it.tipo==="aval")?" free":"";
+  body.innerHTML=`
+    ${it.img?`<img class="pz-img" src="img/${it.img}.webp" alt="${it.n}">`:""}
+    <div class="pz-desc">${it.d||""}</div>
+    <div class="pz-price${priceCls}">${it.tipo==="from"?`<small>a partir de </small>`:""}${
+        it.tipo==="gratis"?"Gratuita": it.tipo==="aval"?"Avaliação gratuita": brl(it.p)}</div>
+    <div class="opt-group"><label>Algo que a gente deva saber? (opcional)</label>
+      <textarea class="obs-in" id="pObs" rows="2" placeholder="ex: sinto sensibilidade, tenho medo de dentista, quero trocar restauração antiga…" oninput="modal.obs=this.value">${modal.obs}</textarea>
+    </div>
+    <div class="opt-group"><label>Aproveite e agende também</label>
+      <div class="sug-row">${leveJuntoChips(it.id)}</div>
+    </div>`;
+  document.getElementById("shFoot").innerHTML=`
+    <button class="pz-add" onclick="addProc()"><span>Adicionar à consulta</span></button>`;
+}
+function leveJuntoChips(excludeId){
+  const sugeridos=["limpeza","clareamento","avaliacao"].filter(id=>id!==excludeId && !cart.some(l=>l.id===id));
+  if(!sugeridos.length) return `<span style="font-size:12.5px;color:var(--ink-soft)">Tudo certo — é só adicionar.</span>`;
+  return sugeridos.map(id=>{const x=ALL[id];
+    return `<button class="sug-chip" onclick="addNamed('${id}')">+ ${x.n} <b>${x.tipo==="gratis"?"grátis":x.tipo==="from"?"a partir de "+brl(x.p):brl(x.p)}</b></button>`;
+  }).join("");
+}
+function addProc(){
+  const it=modal.item;
+  if(!cart.some(l=>l.id===it.id)) cart.push({id:it.id, obs:modal.obs.trim()});
+  closeAll(); onCartChange(); toast(it.n+" adicionado à consulta");
+}
+function addNamed(id){
+  if(!cart.some(l=>l.id===id)){ cart.push({id, obs:""}); toast(ALL[id].n+" adicionado"); }
+  onCartChange();
+  if(sheetMode==="proc") renderProc();
+  else if(sheetMode==="cart") renderCart();
+}
+function removeProc(id){ cart=cart.filter(l=>l.id!==id); onCartChange(); if(sheetMode==="cart") renderCart(); }
+
+/* ===================== FAB / ESTADO ===================== */
+function count(){ return cart.length; }
+function onCartChange(){
+  syncCards(); persistCart();
+  const n=count();
+  document.getElementById("fabCount").textContent=n;
+  document.getElementById("fabTotal").textContent = n?("Agendar "+n+" "+(n>1?"itens":"item")):"Agendar";
+  document.getElementById("fab").classList.toggle("hide",n===0);
+  if(document.getElementById("sheet").classList.contains("on") && sheetMode==="cart") { /* re-render feito por chamadores */ }
+}
+
+/* ===================== SHEET CTRL ===================== */
+let sheetMode="";
+function openSheet(m){ sheetMode=m||"proc"; document.getElementById("overlay").classList.add("on"); document.getElementById("sheet").classList.add("on"); document.body.style.overflow="hidden"; }
+function closeAll(){ document.getElementById("overlay").classList.remove("on"); document.getElementById("sheet").classList.remove("on"); document.body.style.overflow=""; sheetMode=""; }
+
+function startAgendar(ev){ if(ev)ev.preventDefault();
+  if(!cart.some(l=>l.id==="avaliacao")) cart.push({id:"avaliacao",obs:""});
+  onCartChange(); openCart();
+}
+
+/* ===================== DATAS ===================== */
+const DIAS_SEM=["dom","seg","ter","qua","qui","sex","sáb"];
+const MESES=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+function datasDisponiveis(){
+  const out=[]; const base=new Date(); base.setHours(0,0,0,0);
+  for(let i=1;i<=CONFIG.diasAgenda;i++){
+    const d=new Date(base); d.setDate(base.getDate()+i);
+    if(CONFIG.horario[d.getDay()]){
+      out.push({key:d.toISOString().slice(0,10), dw:DIAS_SEM[d.getDay()], dd:d.getDate(), dm:MESES[d.getMonth()], dow:d.getDay(),
+        label:`${DIAS_SEM[d.getDay()]}, ${String(d.getDate()).padStart(2,"0")}/${String(d.getMonth()+1).padStart(2,"0")}`});
+    }
+  }
+  return out;
+}
+function slotsPara(dow){ return dow===6?CONFIG.slotsSabado:CONFIG.slotsSemana; }
+function setData(key,label,dow){ order.data=key; order.dataLabel=label; order.dow=dow;
+  // limpa horário se não existir mais
+  if(!slotsPara(dow).includes(order.hora)) order.hora="";
+  renderCart(); }
+function setHora(h){ order.hora=h; renderCart(); }
+
+/* ===================== CARRINHO / CONSULTA ===================== */
+function openCart(){ renderCart(); openSheet("cart"); }
+function renderCart(){
+  document.getElementById("shTitle").textContent="Minha consulta";
+  const body=document.getElementById("shBody"), foot=document.getElementById("shFoot");
+  if(!cart.length){
+    body.innerHTML=`<div class="empty"><div class="em">🦷</div>Nenhum procedimento selecionado.<br>Comece pela <b>avaliação gratuita</b>.</div>`;
+    foot.innerHTML=`<button class="pz-add" onclick="startAgendar()">Agendar avaliação gratuita</button>`; return;
+  }
+  const linhas=cart.map(l=>{const it=ALL[l.id];
+    const img=it.img?`<img src="img/${it.img}.webp" alt="">`:`<div class="ni">${EMOJI[it.catKey]||"🦷"}</div>`;
+    return `<div class="citem">${img}
+      <div class="ci-t"><h4>${it.n}</h4><div class="cfg">${precoTexto(it)}${l.obs?` · <i>${l.obs}</i>`:""}</div></div>
+      <span class="lp">${it.tipo==="gratis"?"Grátis":it.tipo==="aval"?"—":it.tipo==="from"?brl(it.p):brl(it.p)}</span>
+      <button class="rm" onclick="removeProc('${l.id}')" aria-label="remover">×</button></div>`;
+  }).join("");
+  body.innerHTML = nudgeBlock() + linhas + suggestBlock() + dateTimeBlock();
+
+  const s=statusLoja();
+  foot.innerHTML=`
+    <div class="field"><label>Seu nome</label>
+      <input class="txt" id="fNome" placeholder="Nome do paciente" value="${order.nome}" oninput="order.nome=this.value;updateSend()"></div>
+    <div class="field"><label>Seu WhatsApp</label>
+      <input class="txt" id="fTel" inputmode="numeric" placeholder="(11) 90000-0000" value="${order.tel}" oninput="order.tel=this.value;updateSend()"></div>
+    <div class="field"><label>Convênio (opcional)</label>
+      <select class="txt" id="fConv" onchange="order.convenio=this.value">
+        <option value="">Selecione (ou deixe em Particular)</option>
+        ${CONFIG.convenios.map(c=>`<option value="${c}" ${order.convenio===c?"selected":""}>${c}</option>`).join("")}
+      </select></div>
+    ${estimativa()}
+    <button class="send" id="sendBtn" onclick="enviar()">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.5 1.8 1 .9 1.8 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.8.9c.2.1.4.2.4.3.1.1.1.6-.1 1.1Z"/></svg>
+      ${s.aberto?'Confirmar agendamento no WhatsApp':'Enviar agendamento no WhatsApp'}</button>
+    <div class="hint">A confirmação do dia e horário é feita na conversa do WhatsApp. A avaliação é gratuita e sem compromisso.</div>`;
+  updateSend();
+}
+function dateTimeBlock(){
+  const datas=datasDisponiveis();
+  const slots = order.dow!==undefined ? slotsPara(order.dow) : [];
+  return `
+  <div class="field"><label>Escolha o dia</label>
+    <div class="date-row">${datas.map(d=>`
+      <button class="dcell ${order.data===d.key?'sel':''}" onclick="setData('${d.key}','${d.label}',${d.dow})">
+        <div class="dw">${d.dw}</div><div class="dd">${String(d.dd).padStart(2,'0')}</div><div class="dm">${d.dm}</div>
+      </button>`).join("")}</div>
+  </div>
+  <div class="field"><label>Escolha o horário</label>
+    ${order.data? `<div class="slot-row">${slots.map(h=>`<button class="slot ${order.hora===h?'sel':''}" onclick="setHora('${h}')">${h}</button>`).join("")}</div>`
+      : `<div class="hint" style="margin-top:0">Selecione um dia acima para ver os horários.</div>`}
+  </div>`;
+}
+function nudgeBlock(){
+  if(cart.some(l=>l.id==="avaliacao")) return "";
+  return `<div class="nudge">💡 <b>Dica:</b> comece pela avaliação gratuita — o dentista confirma o que você precisa antes de qualquer tratamento.</div>`;
+}
+function suggestBlock(){
+  const faltam=["limpeza","clareamento"].filter(id=>!cart.some(l=>l.id===id));
+  if(!faltam.length) return "";
+  return `<div class="suggest"><b>Complete sua consulta</b> — aproveite a visita e já resolva de uma vez:
+    <div class="sug-row" style="margin-top:9px">${faltam.map(id=>{const x=ALL[id];
+      return `<button class="sug-chip" onclick="addNamed('${id}')">+ ${x.n} <b>${x.tipo==="from"?"a partir de "+brl(x.p):brl(x.p)}</b></button>`;}).join("")}</div></div>`;
+}
+function estimativa(){
+  const pagos=cart.map(l=>ALL[l.id]).filter(it=>it.tipo==="from"||it.tipo==="fixo");
+  if(!pagos.length) return "";
+  const soma=pagos.reduce((s,it)=>s+it.p,0);
+  const temFrom=pagos.some(it=>it.tipo==="from");
+  return `<div style="margin:4px 0 12px">
+    <div class="totrow"><span style="font-weight:600">Estimativa ${temFrom?"a partir de":""}</span><span class="tv">${brl(soma)}</span></div>
+    <div class="hint" style="margin-top:-4px">Valor de referência. O valor final é definido na avaliação, conforme seu caso.</div></div>`;
+}
+function updateSend(){ const b=document.getElementById("sendBtn"); if(!b)return;
+  const ok = order.nome.trim() && order.tel.trim() && order.data && order.hora;
+  b.disabled=!ok; }
+
+/* ===================== ENVIO WHATSAPP ===================== */
+function enviar(){
+  if(!cart.length){toast("Selecione um procedimento");return;}
+  if(!order.nome.trim()){toast("Digite seu nome");return;}
+  if(!order.tel.trim()){toast("Digite seu WhatsApp");return;}
+  if(!order.data){toast("Escolha o dia");return;}
+  if(!order.hora){toast("Escolha o horário");return;}
+  const L=[];
+  L.push(`*AGENDAMENTO DE CONSULTA — ${CONFIG.nome}*`); L.push("");
+  L.push(`*Paciente:* ${order.nome.trim()}`);
+  L.push(`*WhatsApp:* ${order.tel.trim()}`);
+  L.push(`*Data:* ${order.dataLabel}`);
+  L.push(`*Horário:* ${order.hora}`);
+  L.push(`*Convênio:* ${order.convenio||"Particular"}`);
+  L.push(""); L.push("*Procedimento(s) de interesse:*");
+  cart.forEach(l=>{ const it=ALL[l.id];
+    L.push(`• ${it.n} — ${precoTexto(it)}`);
+    if(l.obs) L.push(`   _${l.obs}_`);
+  });
+  if(order.obs) { L.push(""); L.push(`*Observação:* ${order.obs}`); }
+  L.push(""); L.push("_Agendamento feito pelo site_");
+  localStorage.setItem("so_last", JSON.stringify({cart, order:{...order}}));
+  localStorage.setItem("so_nome", order.nome.trim());
+  localStorage.setItem("so_tel", order.tel.trim());
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=`+encodeURIComponent(L.join("\n")),"_blank");
+}
+
+/* ===================== REPETIR / NOME SALVO ===================== */
+function persistCart(){ localStorage.setItem("so_cart", JSON.stringify(cart)); }
+function initRepeat(){
+  const nome=localStorage.getItem("so_nome"); if(nome){ order.nome=nome; order.tel=localStorage.getItem("so_tel")||""; }
+  const last=localStorage.getItem("so_last");
+  if(last){ try{ const d=JSON.parse(last); if(d.cart&&d.cart.length){
+    const btn=document.getElementById("repeatBtn"); btn.style.display="block";
+    const resumo=d.cart.map(l=>ALL[l.id]?ALL[l.id].n:"").filter(Boolean).slice(0,2).join(", ");
+    btn.innerHTML=`🔁 Repetir último agendamento <b>· ${resumo}${d.cart.length>2?"…":""}</b>`;
+  }}catch(e){} }
+}
+function repeatLast(){
+  const last=localStorage.getItem("so_last"); if(!last)return;
+  try{ const d=JSON.parse(last);
+    cart=(d.cart||[]).filter(l=>ALL[l.id]).map(l=>({id:l.id,obs:l.obs||""}));
+    if(d.order){ order.nome=d.order.nome||order.nome; order.tel=d.order.tel||order.tel; order.convenio=d.order.convenio||""; }
+    onCartChange(); openCart(); toast("Agendamento anterior carregado");
+  }catch(e){}
+}
+
+/* ===================== DEEP LINK ?proc= ===================== */
+function initDeepLink(){
+  const p=new URLSearchParams(location.search).get("proc");
+  if(p && ALL[p]){ setTimeout(()=>openProc(p),350); }
+}
+
+/* ===================== SCROLLSPY ===================== */
+function initSpy(){
+  const links=[...document.querySelectorAll(".nav a")];
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+    links.forEach(l=>l.classList.toggle("active",l.dataset.cid===e.target.id));
+    const al=links.find(l=>l.dataset.cid===e.target.id); if(al)al.scrollIntoView({inline:"center",block:"nearest"});
+  }})},{rootMargin:"-45% 0px -50% 0px"});
+  document.querySelectorAll(".sec").forEach(s=>io.observe(s));
+}
+
+/* ===================== PWA ===================== */
+let deferredPrompt=null;
+const ehMobile = window.matchMedia("(max-width: 768px)").matches || window.matchMedia("(pointer: coarse)").matches;
+window.addEventListener("beforeinstallprompt",e=>{ e.preventDefault(); deferredPrompt=e; if(ehMobile){ document.getElementById("pwaBar").style.display="flex"; } });
+function installPWA(){ if(!deferredPrompt)return; deferredPrompt.prompt(); deferredPrompt=null; document.getElementById("pwaBar").style.display="none"; }
+if("serviceWorker" in navigator){ window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{})); }
+
+/* ===================== toast ===================== */
+let tt; function toast(m){ const t=document.getElementById("toast"); t.textContent=m; t.classList.add("on"); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove("on"),1700); }
+
+renderMeta(); render(); initSpy(); initRepeat(); initDeepLink();
+setInterval(renderMeta,60000);
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Dentist",
+  "name":"Sorriso Odonto",
+  "description":"Clínica odontológica com avaliação gratuita. Limpeza, clareamento, aparelho ortodôntico, implante e mais.",
+  "image":"https://SEU-DOMINIO.com.br/og.jpg",
+  "url":"https://SEU-DOMINIO.com.br/",
+  "telephone":"+SEU_WHATSAPP",
+  "priceRange":"$$",
+  "address":{"@type":"PostalAddress","streetAddress":"Av. das Acácias, 480 — Centro","addressLocality":"Bela Vista do Sul","addressRegion":"SP","addressCountry":"BR"},
+  "medicalSpecialty":"Dentistry",
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"12:00"}
+  ],
+  "availableService":[
+    {"@type":"MedicalProcedure","name":"Avaliação odontológica gratuita"},
+    {"@type":"MedicalProcedure","name":"Limpeza / Profilaxia"},
+    {"@type":"MedicalProcedure","name":"Clareamento dental"},
+    {"@type":"MedicalProcedure","name":"Restauração"},
+    {"@type":"MedicalProcedure","name":"Tratamento de canal"},
+    {"@type":"MedicalProcedure","name":"Extração"},
+    {"@type":"MedicalProcedure","name":"Aparelho ortodôntico"},
+    {"@type":"MedicalProcedure","name":"Prótese dentária"},
+    {"@type":"MedicalProcedure","name":"Implante dentário"}
+  ]
+}
+</script>
+</body>
+</html>

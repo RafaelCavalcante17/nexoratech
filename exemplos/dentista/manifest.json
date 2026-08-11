@@ -1,0 +1,16 @@
+{
+  "name": "Sorriso Odonto",
+  "short_name": "Sorriso Odonto",
+  "description": "Agende sua avaliação odontológica gratuita pela internet.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#EDF6FA",
+  "theme_color": "#2F7DB5",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
