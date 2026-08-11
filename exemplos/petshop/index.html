@@ -1,0 +1,725 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<base href="./">
+<title>Pet Amigo — Banho & Tosa em Vila Aurora | Agende pela internet</title>
+<meta name="description" content="Banho e tosa com carinho em Vila Aurora. Agende online: escolha o serviço, o porte do seu pet, a data e o horário. Banho, tosa, hidratação e mais — sem filas, sem complicação.">
+<meta name="keywords" content="banho e tosa, petshop, agendamento pet, tosa higiênica, banho para cães, tosa de gatos, hidratação pet, Pet Amigo, Vila Aurora">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://SEU-DOMINIO.com.br/">
+<meta name="geo.region" content="BR">
+<meta name="geo.placename" content="Vila Aurora">
+
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#3E86C9">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pet Amigo — Banho & Tosa">
+<meta property="og:title" content="Pet Amigo — Banho & Tosa">
+<meta property="og:description" content="Agende o banho e a tosa do seu pet pela internet. Escolha o serviço, o porte, a data e o horário — rapidinho.">
+<meta property="og:url" content="https://SEU-DOMINIO.com.br/">
+<meta property="og:image" content="https://SEU-DOMINIO.com.br/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://SEU-DOMINIO.com.br/og.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EAF4FB; --paper:#FFFFFF; --blue:#3E86C9; --blue-deep:#2C6BA6; --teal:#2FB6A8;
+  --yellow:#F5C542; --ink:#22303B; --ink-soft:#6B7C89; --line:#DCEBF6;
+  --green:#25D366; --shadow:0 8px 26px rgba(35,90,150,.12); --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:var(--bg);
+  background-image:radial-gradient(1100px 480px at 50% -8%,#f4fbff,transparent 70%);
+  -webkit-font-smoothing:antialiased;padding-bottom:96px}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select{font-family:inherit}
+h1,h2,h3,.disp{font-family:'Baloo 2',Verdana,sans-serif}
+
+/* HERO */
+.hero{position:relative;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:#1c4c78}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.5}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,76,120,.45),rgba(44,107,166,.92))}
+.hero-in{position:relative;max-width:960px;margin:0 auto;padding:20px 16px 22px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand .logo{width:60px;height:60px;border-radius:16px;border:2px solid rgba(255,255,255,.35);box-shadow:var(--shadow);background:#fff}
+.brand h1{font-size:33px;line-height:.95;font-weight:800}
+.brand .tg{font-size:12.5px;color:#d7ecff;font-weight:500;margin-top:4px;font-family:'Inter'}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);
+  padding:6px 11px;border-radius:999px;font-size:12.5px;font-weight:500}
+.chip.status-open{background:rgba(47,182,168,.34);border-color:rgba(120,230,215,.5)}
+.chip.status-closed{background:rgba(0,0,0,.24)}
+.chip a{color:#fff;text-decoration:none}
+.dot{width:8px;height:8px;border-radius:50%}
+.dot.on{background:#57e6d3;box-shadow:0 0 0 0 rgba(87,230,211,.6);animation:pulse 1.8s infinite}
+.dot.off{background:var(--yellow)}
+@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(87,230,211,0)}100%{box-shadow:0 0 0 0 rgba(87,230,211,0)}}
+.repeat{margin-top:14px;display:none;width:100%;background:#fff;color:var(--blue-deep);font-weight:700;
+  padding:12px;border-radius:12px;font-size:14px;box-shadow:var(--shadow)}
+.repeat b{color:var(--ink)}
+
+.closed-banner{background:var(--yellow);color:#4a3708;font-size:13px;font-weight:600;text-align:center;padding:9px 14px;display:none}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 4px 14px rgba(35,90,150,.05)}
+.nav-in{max-width:960px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;padding:11px 14px;scrollbar-width:none}
+.nav-in::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap;font-size:13px;font-weight:600;color:var(--ink-soft);padding:7px 14px;border-radius:999px;
+  background:var(--bg);border:1px solid var(--line);transition:.15s;text-decoration:none}
+.nav a.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+
+main{max-width:960px;margin:0 auto;padding:6px 14px 40px}
+.sec{padding-top:22px;scroll-margin-top:62px}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin:6px 2px 14px;padding-bottom:8px;border-bottom:2px solid var(--line)}
+.sec-h h2{font-size:24px;color:var(--blue-deep)}
+.sec-h .sub{font-size:12.5px;color:var(--ink-soft);font-style:italic}
+.grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:620px){.grid{grid-template-columns:1fr 1fr}}
+
+.card{display:flex;gap:13px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px;box-shadow:var(--shadow)}
+.card .thumb{width:104px;height:104px;flex:none;border-radius:12px;object-fit:cover;background:var(--bg);border:1px solid var(--line)}
+.card .txt{flex:1;min-width:0;display:flex;flex-direction:column}
+.card h3{font-family:'Baloo 2';font-size:17px;font-weight:700;line-height:1.15}
+.card .desc{font-size:12.5px;color:var(--ink-soft);line-height:1.4;margin-top:4px;flex:1}
+.card .bot{display:flex;align-items:center;justify-content:space-between;margin-top:9px;gap:8px}
+.price{font-family:'Baloo 2';font-size:19px;font-weight:700}
+.price small{font-family:'Inter';font-weight:500;font-size:11px;color:var(--ink-soft)}
+.add{background:var(--blue);color:#fff;font-weight:700;font-size:13px;padding:9px 16px;border-radius:10px;flex:none;white-space:nowrap;transition:.15s}
+.add:hover{background:var(--blue-deep)}.add:active{transform:scale(.95)}
+.qtc{display:inline-flex;align-items:center;background:var(--blue);border-radius:10px;overflow:hidden}
+.qtc button{color:#fff;font-size:18px;font-weight:700;width:32px;height:34px}
+.qtc span{color:#fff;font-weight:700;font-size:14px;min-width:22px;text-align:center}
+.simple .card .thumb{display:none}
+
+/* FAB */
+.fab{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:60;width:min(92%,540px);
+  background:var(--teal);color:#fff;border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 10px 30px rgba(47,182,168,.42);transition:.2s;font-weight:700}
+.fab:active{transform:translateX(-50%) scale(.98)}
+.fab.hide{transform:translateX(-50%) translateY(140%)}
+.fab .c-count{background:#fff;color:var(--teal);border-radius:8px;padding:3px 9px;font-size:13px;margin-right:10px}
+.fab .c-total{font-family:'Baloo 2';font-size:19px}
+
+/* OVERLAY + SHEET/MODAL */
+.overlay{position:fixed;inset:0;background:rgba(20,45,70,.5);z-index:70;opacity:0;pointer-events:none;transition:.2s}
+.overlay.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:80;background:var(--paper);border-radius:20px 20px 0 0;max-height:93vh;
+  display:flex;flex-direction:column;transform:translateY(100%);transition:transform .28s cubic-bezier(.3,.8,.3,1)}
+.sheet.on{transform:translateY(0)}
+@media(min-width:620px){.sheet{left:50%;right:auto;transform:translate(-50%,100%);width:520px;border-radius:20px 20px 0 0}.sheet.on{transform:translate(-50%,0)}}
+.sh-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px 12px;border-bottom:1px solid var(--line)}
+.sh-head h2{font-size:20px;color:var(--blue-deep)}
+.sh-close{font-size:26px;color:var(--ink-soft);width:34px;height:34px}
+.sh-body{overflow-y:auto;padding:6px 18px 10px}
+.sh-foot{padding:14px 18px calc(16px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--paper)}
+
+/* MODAL SERVIÇO */
+.pz-img{width:100%;height:170px;object-fit:cover;border-radius:14px;margin:8px 0 4px}
+.pz-desc{font-size:13px;color:var(--ink-soft);line-height:1.5;margin-bottom:8px}
+.opt-group{margin-top:16px}
+.opt-group>label{display:block;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:8px}
+.opt-row{display:flex;gap:9px;flex-wrap:wrap}
+.opt{border:1.5px solid var(--line);border-radius:11px;padding:10px 13px;font-size:13.5px;font-weight:600;background:var(--paper);
+  display:flex;align-items:center;gap:7px;transition:.15s}
+.opt.sel{border-color:var(--blue);background:#e9f3fc;box-shadow:0 0 0 2px rgba(62,134,201,.14)}
+.opt .pl{color:var(--ink-soft);font-weight:500;font-size:12px}
+.porte-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}
+.porte{border:1.5px solid var(--line);border-radius:12px;padding:11px 8px;background:var(--paper);text-align:center;transition:.15s}
+.porte .pn{font-family:'Baloo 2';font-size:15px;font-weight:700;display:block}
+.porte .pk{font-size:11px;color:var(--ink-soft);display:block;margin:1px 0 4px}
+.porte .pp{font-family:'Baloo 2';font-size:15px;font-weight:700;color:var(--blue-deep)}
+.porte.sel{border-color:var(--blue);background:#e9f3fc;box-shadow:0 0 0 2px rgba(62,134,201,.14)}
+.obs-in{width:100%;margin-top:6px;font-size:13px;border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--bg)}
+.obs-in:focus,input:focus,select:focus{outline:none;border-color:var(--teal)}
+.qty-big{display:flex;align-items:center;gap:14px;justify-content:center;margin:6px 0}
+.qty-big button{width:42px;height:42px;border-radius:12px;background:var(--bg);border:1.5px solid var(--line);font-size:22px;font-weight:700;color:var(--blue)}
+.qty-big span{font-family:'Baloo 2';font-size:24px;font-weight:700;min-width:30px;text-align:center}
+.pz-add{width:100%;background:var(--blue);color:#fff;font-weight:700;font-size:16px;padding:15px;border-radius:13px;display:flex;justify-content:space-between;align-items:center}
+.pz-add:active{transform:scale(.99)}
+
+/* CART / AGENDAMENTO */
+.citem{display:flex;gap:11px;padding:13px 0;border-bottom:1px solid var(--line)}
+.citem img,.citem .ni{width:54px;height:54px;border-radius:10px;object-fit:cover;flex:none;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:22px}
+.citem .ci-t{flex:1;min-width:0}
+.citem .ci-t h4{font-size:14px;font-weight:700}
+.citem .ci-t .cfg{font-size:12px;color:var(--ink-soft);margin-top:2px;line-height:1.35}
+.citem .ci-r{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;gap:6px}
+.citem .lp{font-family:'Baloo 2';font-weight:700;font-size:15px}
+.suggest{background:#fff8e6;border:1px dashed var(--yellow);border-radius:12px;padding:11px 13px;margin:12px 0 2px;font-size:13px}
+.suggest b{color:var(--blue-deep)}
+.sug-row{display:flex;gap:8px;margin-top:9px;overflow-x:auto;scrollbar-width:none}
+.sug-row::-webkit-scrollbar{display:none}
+.sug-chip{white-space:nowrap;background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 11px;font-size:12.5px;font-weight:600}
+.sug-chip b{color:var(--blue)}
+.sug-chip:active{transform:scale(.96)}
+/* nudge "agende também" */
+.frete{background:#eafaf7;border:1px solid #bfe9e2;border-radius:12px;padding:10px 13px;margin:0 0 12px}
+.frete-t{font-size:12.5px;font-weight:600;color:var(--ink)}
+.frete-t b{color:var(--teal)}
+
+.empty{text-align:center;color:var(--ink-soft);padding:46px 20px;font-size:14px}
+.empty .em{font-size:42px;margin-bottom:8px}
+
+.field{margin-top:14px}
+.field>label{display:block;font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:7px}
+.opts2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.o2{border:1.5px solid var(--line);border-radius:11px;padding:11px 12px;font-size:13px;font-weight:600;background:var(--paper);
+  display:flex;flex-direction:column;gap:2px;text-align:left;line-height:1.2}
+.o2 small{font-weight:500;color:var(--ink-soft);font-size:11px}
+.o2.sel{border-color:var(--blue);background:#e9f3fc;box-shadow:0 0 0 2px rgba(62,134,201,.14)}
+input.txt{width:100%;border:1.5px solid var(--line);border-radius:11px;padding:12px 13px;font-size:14px;background:var(--paper)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+
+/* DATA + HORÁRIO */
+.date-row{display:flex;gap:9px;overflow-x:auto;padding:2px 2px 4px;scrollbar-width:none}
+.date-row::-webkit-scrollbar{display:none}
+.dchip{flex:none;min-width:62px;border:1.5px solid var(--line);border-radius:12px;padding:9px 6px;background:var(--paper);text-align:center;transition:.15s}
+.dchip .dw{font-size:11px;color:var(--ink-soft);font-weight:600;text-transform:uppercase}
+.dchip .dd{font-family:'Baloo 2';font-size:18px;font-weight:700;line-height:1.1}
+.dchip .dm{font-size:10.5px;color:var(--ink-soft)}
+.dchip.sel{border-color:var(--blue);background:var(--blue);color:#fff}
+.dchip.sel .dw,.dchip.sel .dm{color:#eaf4fb}
+.slot-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:4px}
+.slot{border:1.5px solid var(--line);border-radius:10px;padding:10px 4px;font-size:14px;font-weight:700;background:var(--paper);text-align:center;color:var(--ink);transition:.15s}
+.slot.sel{border-color:var(--teal);background:#e6f7f4;color:var(--teal)}
+.switch{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--paper)}
+.switch.on{border-color:var(--teal);background:#eafaf7}
+.switch .sw-t{font-size:13.5px;font-weight:600}
+.switch .sw-t small{display:block;font-weight:500;color:var(--ink-soft);font-size:11.5px}
+.toggle{width:46px;height:27px;border-radius:99px;background:#cdd8e2;position:relative;flex:none;transition:.2s}
+.toggle::after{content:"";position:absolute;top:3px;left:3px;width:21px;height:21px;border-radius:50%;background:#fff;transition:.2s;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.switch.on .toggle{background:var(--teal)}.switch.on .toggle::after{left:22px}
+
+.coupon{display:flex;gap:8px;margin-top:8px}
+.coupon input{flex:1}
+.coupon button{background:var(--ink);color:#fff;border-radius:10px;padding:0 16px;font-weight:700;font-size:13px}
+.coupon.ok input{border-color:var(--teal);background:#e6f7f4}
+.sumrow{display:flex;justify-content:space-between;font-size:13.5px;margin:5px 0;color:var(--ink-soft)}
+.sumrow.disc{color:var(--teal);font-weight:600}
+.totrow{display:flex;justify-content:space-between;align-items:baseline;margin:8px 0 12px;padding-top:10px;border-top:1px solid var(--line)}
+.totrow .tv{font-family:'Baloo 2';font-size:26px;font-weight:700}
+.send{width:100%;background:var(--green);color:#063c1e;font-weight:700;font-size:16px;padding:15px;border-radius:13px;display:flex;align-items:center;justify-content:center;gap:9px}
+.send:active{transform:scale(.99)}.send:disabled{background:#c3ccd3;color:#fff}
+.send svg{width:20px;height:20px;fill:#063c1e}
+.hint{font-size:11.5px;color:var(--ink-soft);margin-top:8px;line-height:1.45}
+
+.sobre{max-width:840px;margin:22px auto 0;padding:24px 20px 4px}
+.sobre h2{font-size:20px;color:var(--blue-deep);margin-bottom:10px}
+.sobre p{font-size:13.5px;color:var(--ink-soft);line-height:1.7;margin-bottom:10px}
+.sobre b{color:var(--ink);font-weight:600}
+footer{background:var(--blue-deep);color:#d7ecff;text-align:center;padding:24px 18px 34px;font-size:12.5px;line-height:1.7;margin-top:14px}
+footer b{color:#fff}
+footer .fb{font-family:'Baloo 2';font-size:20px;color:#fff;margin-bottom:6px}
+.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(20px);z-index:90;background:var(--ink);color:#fff;
+  padding:11px 18px;border-radius:12px;font-size:13.5px;font-weight:600;opacity:0;pointer-events:none;transition:.25s;box-shadow:0 8px 24px rgba(0,0,0,.3);max-width:90%}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* PWA install */
+.pwa{position:fixed;left:50%;transform:translateX(-50%);bottom:88px;z-index:55;width:min(92%,540px);display:none;
+  background:var(--ink);color:#fff;border-radius:12px;padding:11px 14px;align-items:center;gap:10px;font-size:13px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.pwa b{font-weight:700}
+.pwa .in{flex:1}
+.pwa button{background:var(--yellow);color:#4a3708;font-weight:700;border-radius:9px;padding:8px 12px;font-size:13px}
+.pwa .x{background:none;color:#bbb;padding:4px 8px;font-size:18px}
+
+/* fix: formulario longo (endereco/data) deixava o botao de enviar fora da tela */
+.sh-body{flex:0 1 auto;min-height:0;overflow-y:auto;max-height:34vh}
+.sh-foot{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.sh-foot .send{position:sticky;bottom:0;z-index:3;box-shadow:0 -10px 20px rgba(0,0,0,.18)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-bg"><img src="img/hero.webp" alt="Cão feliz recém-tosado"></div>
+  <div class="hero-in">
+    <div class="brand">
+      <img class="logo" src="apple-touch-icon.png" alt="Pet Amigo">
+      <div>
+        <h1>Pet Amigo</h1>
+        <div class="tg">Banho &amp; Tosa · seu pet nas melhores mãos</div>
+      </div>
+    </div>
+    <div class="meta" id="meta"></div>
+    <button class="repeat" id="repeatBtn" onclick="repeatLast()"></button>
+  </div>
+</header>
+<div class="closed-banner" id="closedBanner"></div>
+
+<nav class="nav"><div class="nav-in" id="nav"></div></nav>
+<main id="menu"></main>
+
+<section class="sobre">
+  <h2>Sobre o Pet Amigo</h2>
+  <p>O <b>Pet Amigo</b> é um espaço de banho e tosa feito com <b>carinho de verdade</b>. Trabalhamos com produtos neutros e hipoalergênicos, secagem cuidadosa e profissionais que amam o que fazem — pra seu melhor amigo sair cheiroso, macio e feliz.</p>
+  <p>Escolha o <b>serviço</b>, informe o <b>porte do seu pet</b> e agende a <b>data e o horário</b> que forem melhores pra você. Sem filas e sem complicação: você recebe a confirmação direto no WhatsApp. Se preferir, temos <b>leva e traz</b> na região.</p>
+</section>
+
+<footer>
+  <div class="fb">Pet Amigo — Banho &amp; Tosa</div>
+  <span id="footAddr"></span><br>
+  <b>Seg a Sáb</b> · 8h às 18h · Agendamento pela internet<br>
+  <span style="opacity:.7">Feito pelo site</span>
+</footer>
+
+<button class="fab hide" id="fab" onclick="openCart()">
+  <span><span class="c-count" id="fabCount">0</span>Ver agendamento</span>
+  <span><span class="c-total" id="fabTotal">R$ 0,00</span> →</span>
+</button>
+
+<div class="pwa" id="pwaBar">
+  <div class="in"><b>Instale o Pet Amigo</b> no seu celular — vira um app, 1 toque pra agendar.</div>
+  <button onclick="installPWA()">Instalar</button>
+  <button class="x" onclick="document.getElementById('pwaBar').style.display='none'">×</button>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeAll()"></div>
+
+<div class="sheet" id="sheet">
+  <div class="sh-head"><h2 id="shTitle"></h2><button class="sh-close" onclick="closeAll()">×</button></div>
+  <div class="sh-body" id="shBody"></div>
+  <div class="sh-foot" id="shFoot"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ===================== CONFIG ===================== */
+const CONFIG = {
+  nome: "Pet Amigo — Banho & Tosa",
+  whatsapp: "SEU_WHATSAPP",                 // WhatsApp do petshop (só dígitos, 55 + DDD)
+  endereco: "Rua das Acácias, 145 — Vila Aurora",
+  maps: "https://maps.google.com/?q=Rua+das+Acacias+145+Vila+Aurora",
+  horario: { dias:[1,2,3,4,5,6], abre:"08:00", fecha:"18:00" }, // 1=Seg ... 6=Sáb (fecha Dom)
+  slots: ["08:00","09:00","10:00","11:00","13:00","14:00","15:00","16:00","17:00"],
+  transporte: { label:"Leva e traz", valor:15 },
+  cupons: { "PRIMEIRA10": {tipo:"percent", valor:10, label:"10% na primeira vez"} },
+};
+
+/* ===================== PORTES ===================== */
+const PORTES = [
+  {id:"P", n:"Pequeno", d:"até 10kg"},
+  {id:"M", n:"Médio",   d:"10 a 25kg"},
+  {id:"G", n:"Grande",  d:"acima de 25kg"},
+];
+
+/* ===================== SERVIÇOS ===================== */
+// porte:true  -> abre modal, preço muda por porte {P,M,G}
+// porte:false -> item simples (preço único), botão adicionar direto
+const MENU = [
+ {cat:"Banho & Tosa", key:"banho", sub:"escolha o porte do seu pet", porte:true, items:[
+   {id:"banho",        n:"Banho",                 d:"shampoo neutro, secagem e escovação · 40 a 60 min", p:{P:40,M:55,G:75}, img:"banho"},
+   {id:"tosa-hig",     n:"Tosa higiênica",        d:"aparo de patas, barriga e ao redor pra manter a higiene", p:{P:35,M:45,G:60}, img:"tosa"},
+   {id:"banho-tosa",   n:"Banho + Tosa completa", d:"banho caprichado + tosa do jeitinho que você gosta", p:{P:70,M:95,G:130}, img:"pos-banho"},
+   {id:"tosa-maquina", n:"Tosa na máquina",       d:"tosa uniforme na máquina, pelo mais baixo e fresquinho", p:{P:50,M:65,G:85}, img:"tosa"},
+   {id:"desembolo",    n:"Desembolo",             d:"remoção cuidadosa de nós e embaraços do pelo", p:{P:30,M:45,G:60}, img:"gato"},
+ ]},
+ {cat:"Cuidados & Mimos", key:"cuidados", sub:"complete o dia de spa", porte:false, items:[
+   {id:"hidratacao",   n:"Hidratação",            d:"máscara que deixa o pelo macio e brilhoso", p:{P:25,M:30,G:40}, img:"ambiente", porte:true},
+   {id:"corte-unhas",  n:"Corte de unhas",        d:"corte e lixamento das unhas · qualquer porte", p:20},
+   {id:"escovacao",    n:"Escovação dental",      d:"hálito fresco e dentes limpos", p:20},
+   {id:"perfume",      n:"Perfume pet",           d:"finalização com colônia suave", p:10},
+   {id:"laco",         n:"Laço ou gravatinha",    d:"aquele charme pra sair estiloso", p:8},
+ ]},
+];
+
+const ALL={}; MENU.forEach(c=>c.items.forEach(i=>{i.cat=c.cat;i.catKey=c.key;if(i.porte===undefined)i.porte=!!c.porte;ALL[i.id]=i}));
+const EMOJI = {banho:"🛁", cuidados:"✨"};
+const brl=v=>"R$ "+v.toFixed(2).replace(".",",");
+const porteNome=id=>PORTES.find(p=>p.id===id)?.n||"";
+function precoPorte(it,porte){ return typeof it.p==="object" ? it.p[porte] : it.p; }
+function precoMin(it){ return typeof it.p==="object" ? Math.min(it.p.P,it.p.M,it.p.G) : it.p; }
+
+/* ===================== ESTADO ===================== */
+let cart=[]; // {lineId,id,nome,porte,porteNome,precoUnit,qty,obs,img,porteItem}
+let order={data:"", dataLabel:"", horario:"", tutor:"", pet:"", tel:"", cupom:"", transporte:false, porte:"M"};
+let modal={item:null, porte:"M", qty:1, obs:""};
+
+/* ===================== HORÁRIO ===================== */
+function statusLoja(){
+  const now=new Date(); const dia=now.getDay();
+  const [ah,am]=CONFIG.horario.abre.split(":").map(Number);
+  const [fh,fm]=CONFIG.horario.fecha.split(":").map(Number);
+  const min=now.getHours()*60+now.getMinutes();
+  const aberto=CONFIG.horario.dias.includes(dia) && min>=ah*60+am && min<=fh*60+fm;
+  let proximo="";
+  if(!aberto){
+    for(let i=0;i<7;i++){ const d=(dia+i)%7;
+      if(CONFIG.horario.dias.includes(d)){
+        if(i===0 && min<ah*60+am){ proximo="hoje às "+CONFIG.horario.abre; break; }
+        if(i===0) continue;
+        proximo=(i===1?"amanhã":["dom","seg","ter","qua","qui","sex","sáb"][d])+" às "+CONFIG.horario.abre; break;
+      }
+    }
+  }
+  return {aberto, proximo};
+}
+
+/* ===================== RENDER META ===================== */
+function renderMeta(){
+  const s=statusLoja();
+  document.getElementById("meta").innerHTML=`
+    <span class="chip ${s.aberto?'status-open':'status-closed'}"><span class="dot ${s.aberto?'on':'off'}"></span>${s.aberto?'Aberto agora':'Fechado'}</span>
+    <span class="chip"><a href="${CONFIG.maps}" target="_blank" rel="noopener">📍 Como chegar</a></span>
+    <span class="chip">🕐 Seg a Sáb · 8h–18h</span>`;
+  document.getElementById("footAddr").textContent="📍 "+CONFIG.endereco;
+  const cb=document.getElementById("closedBanner");
+  if(!s.aberto){ cb.style.display="block"; cb.textContent="🕐 Estamos fechados agora ("+(s.proximo?"abrimos "+s.proximo:"abrimos em breve")+"). Você pode montar seu agendamento e escolher a melhor data."; }
+  else { cb.style.display="none"; }
+}
+
+/* ===================== RENDER CATÁLOGO ===================== */
+function render(){
+  const nav=document.getElementById("nav"), menu=document.getElementById("menu");
+  nav.innerHTML=""; menu.innerHTML="";
+  MENU.forEach((c,i)=>{
+    const cid="cat-"+c.key;
+    const a=document.createElement("a"); a.href="#"+cid; a.textContent=c.cat; a.dataset.cid=cid;
+    if(i===0)a.classList.add("active"); nav.appendChild(a);
+    const sec=document.createElement("section"); sec.className="sec"; sec.id=cid;
+    sec.innerHTML=`<div class="sec-h"><h2>${c.cat}</h2>${c.sub?`<span class="sub">${c.sub}</span>`:""}</div>`;
+    const g=document.createElement("div"); g.className="grid";
+    c.items.forEach(it=>g.appendChild(cardEl(it)));
+    sec.appendChild(g); menu.appendChild(sec);
+  });
+  syncCards();
+}
+function cardEl(it){
+  const el=document.createElement("div"); el.className="card"; el.id="card-"+it.id;
+  const thumb=it.img?`<img class="thumb" loading="lazy" src="img/${it.img}.webp" alt="${it.n}">`:"";
+  const preco=it.porte?`${brl(precoMin(it))} <small>a partir de</small>`:brl(it.p);
+  el.innerHTML=`${thumb}<div class="txt"><h3>${it.n}</h3><div class="desc">${it.d||""}</div>
+    <div class="bot"><span class="price">${preco}</span><span id="act-${it.id}"></span></div></div>`;
+  return el;
+}
+function actEl(it){
+  if(it.porte) return `<button class="add" onclick="openService('${it.id}')">Agendar</button>`;
+  const q=qtySimple(it.id);
+  if(q===0) return `<button class="add" onclick="addSimple('${it.id}')">Adicionar</button>`;
+  return `<span class="qtc"><button onclick="decSimple('${it.id}')">−</button><span>${q}</span><button onclick="addSimple('${it.id}')">+</button></span>`;
+}
+function syncCards(){ MENU.forEach(c=>c.items.forEach(it=>{const s=document.getElementById("act-"+it.id); if(s)s.innerHTML=actEl(it);})); }
+
+/* ===================== ITENS SIMPLES (preço único) ===================== */
+function qtySimple(id){ return cart.filter(l=>l.id===id&&!l.porteItem).reduce((s,l)=>s+l.qty,0); }
+function addSimple(id){
+  const it=ALL[id]; const line=cart.find(l=>l.id===id&&!l.porteItem);
+  if(line) line.qty++;
+  else cart.push({lineId:"L"+Date.now()+Math.round(Math.random()*999),id,nome:it.n,porte:"",porteNome:"",precoUnit:it.p,qty:1,obs:"",img:it.img||"",porteItem:false});
+  onCartChange(); toast(it.n+" adicionado");
+}
+function decSimple(id){ const line=cart.find(l=>l.id===id&&!l.porteItem); if(!line)return; line.qty--; if(line.qty<=0)cart=cart.filter(l=>l!==line); onCartChange(); }
+
+/* ===================== MODAL SERVIÇO (porte) ===================== */
+function openService(id){
+  const it=ALL[id]; modal={item:it, porte:order.porte||"M", qty:1, obs:""};
+  document.getElementById("shTitle").textContent=it.n;
+  renderService(); openSheet("service");
+}
+function servicePreco(){ return precoPorte(modal.item,modal.porte)*modal.qty; }
+function setPorte(p){ modal.porte=p; order.porte=p; renderService(); }
+function renderService(){
+  const it=modal.item;
+  const body=document.getElementById("shBody");
+  body.innerHTML=`
+    ${it.img?`<img class="pz-img" src="img/${it.img}.webp" alt="${it.n}">`:""}
+    <div class="pz-desc">${it.d||""}</div>
+    <div class="opt-group"><label>Porte do seu pet</label>
+      <div class="porte-row">
+        ${PORTES.map(p=>`<button class="porte ${modal.porte===p.id?'sel':''}" onclick="setPorte('${p.id}')">
+          <span class="pn">${p.n}</span><span class="pk">${p.d}</span><span class="pp">${brl(precoPorte(it,p.id))}</span></button>`).join("")}
+      </div>
+      <div class="hint">O preço muda conforme o tamanho do pet. Na dúvida, escolha o mais próximo — confirmamos na hora.</div>
+    </div>
+    <div class="opt-group"><label>Observação (opcional)</label>
+      <input class="obs-in" id="svObs" placeholder="ex: pelo embaraçado, tem medo de secador, alérgico…" value="${modal.obs}" oninput="modal.obs=this.value">
+    </div>
+    <div class="opt-group"><label>Quantos pets deste porte?</label>
+      <div class="qty-big"><button onclick="modal.qty=Math.max(1,modal.qty-1);renderService()">−</button><span>${modal.qty}</span><button onclick="modal.qty++;renderService()">+</button></div>
+    </div>
+    <div class="opt-group"><label>Adicione também</label>
+      <div class="sug-row">${extrasChips()}</div>
+    </div>`;
+  renderServiceFoot();
+}
+function renderServiceFoot(){
+  document.getElementById("shFoot").innerHTML=`
+    <button class="pz-add" onclick="addService()">
+      <span>Adicionar ao agendamento</span><span>${brl(servicePreco())}</span></button>`;
+}
+function addService(){
+  const it=modal.item;
+  cart.push({
+    lineId:"L"+Date.now()+Math.round(Math.random()*999), id:it.id, nome:it.n,
+    porte:modal.porte, porteNome:porteNome(modal.porte),
+    precoUnit:precoPorte(it,modal.porte), qty:modal.qty, obs:modal.obs, img:it.img||"", porteItem:true
+  });
+  closeAll(); onCartChange(); toast(it.n+" adicionado ao agendamento");
+}
+
+/* ===================== TOTAIS ===================== */
+function count(){ return cart.reduce((s,l)=>s+l.qty,0); }
+function subtotal(){ return cart.reduce((s,l)=>s+l.precoUnit*l.qty,0); }
+function descontoCupom(){ const c=CONFIG.cupons[order.cupom]; if(!c)return 0; return c.tipo==="percent"? subtotal()*c.valor/100 : c.valor; }
+function taxaTransporte(){ return order.transporte?CONFIG.transporte.valor:0; }
+function total(){ return Math.max(0, subtotal()-descontoCupom()+taxaTransporte()); }
+
+function onCartChange(){
+  syncCards(); persistCart();
+  const n=count(); document.getElementById("fabCount").textContent=n;
+  document.getElementById("fabTotal").textContent=brl(total());
+  document.getElementById("fab").classList.toggle("hide",n===0);
+  if(document.getElementById("sheet").classList.contains("on") && sheetMode==="cart") renderCart();
+}
+
+/* ===================== SHEET CTRL ===================== */
+let sheetMode="";
+function openSheet(m){ sheetMode=m||"service"; document.getElementById("overlay").classList.add("on"); document.getElementById("sheet").classList.add("on"); document.body.style.overflow="hidden"; }
+function closeAll(){ document.getElementById("overlay").classList.remove("on"); document.getElementById("sheet").classList.remove("on"); document.body.style.overflow=""; sheetMode=""; }
+
+/* ===================== AGENDAMENTO (carrinho) ===================== */
+function openCart(){ renderCart(); openSheet("cart"); }
+function lineDesc(l){
+  let s = l.porteItem ? `Porte ${l.porteNome}` : "";
+  if(l.obs) s += (s?" · ":"") + l.obs;
+  return s;
+}
+function renderCart(){
+  document.getElementById("shTitle").textContent="Seu agendamento";
+  const body=document.getElementById("shBody"), foot=document.getElementById("shFoot");
+  if(!cart.length){ body.innerHTML=`<div class="empty"><div class="em">🐾</div>Nenhum serviço ainda.<br>Escolha um banho ou tosa no catálogo.</div>`; foot.innerHTML=""; return; }
+  body.innerHTML = nudgeBlock() + cart.map(l=>{
+    const it=ALL[l.id];
+    const img = l.img?`<img src="img/${l.img}.webp" alt="">`:`<div class="ni">${EMOJI[it.catKey]||"🐾"}</div>`;
+    return `<div class="citem">${img}
+      <div class="ci-t"><h4>${l.nome}</h4>
+        <div class="cfg">${lineDesc(l)}</div></div>
+      <div class="ci-r"><span class="lp">${brl(l.precoUnit*l.qty)}</span>
+        <span class="qtc"><button onclick="decLine('${l.lineId}')">−</button><span>${l.qty}</span><button onclick="incLine('${l.lineId}')">+</button></span></div></div>`;
+  }).join("") + suggestBlock();
+
+  const s=statusLoja();
+  foot.innerHTML=`
+    <div class="field"><label>Escolha o dia</label>
+      <div class="date-row" id="dateRow">${dateChips()}</div>
+    </div>
+    <div class="field"><label>Escolha o horário</label>
+      <div class="slot-row">${CONFIG.slots.map(h=>`<button class="slot ${order.horario===h?'sel':''}" onclick="setHorario('${h}')">${h}</button>`).join("")}</div>
+    </div>
+    <div class="field"><label>Leva e traz?</label>
+      <div class="switch ${order.transporte?'on':''}" onclick="toggleTransporte()">
+        <div class="sw-t">Buscar e devolver em casa<small>na região · + ${brl(CONFIG.transporte.valor)}</small></div>
+        <div class="toggle"></div>
+      </div>
+    </div>
+    <div class="field"><label>Nome do tutor</label><input class="txt" id="fTutor" placeholder="Seu nome" value="${order.tutor}" oninput="order.tutor=this.value;updateSend()"></div>
+    <div class="field"><label>Nome do pet</label><input class="txt" id="fPet" placeholder="Nome do seu bichinho" value="${order.pet}" oninput="order.pet=this.value;updateSend()"></div>
+    <div class="field"><label>Seu WhatsApp</label><input class="txt" id="fTel" inputmode="numeric" placeholder="(51) 90000-0000" value="${order.tel}" oninput="order.tel=this.value;updateSend()"></div>
+    <div class="field"><label>Cupom de desconto</label>
+      <div class="coupon ${descontoCupom()>0?'ok':''}"><input class="txt" id="fCupom" placeholder="Tem um cupom?" value="${order.cupom}"><button onclick="aplicarCupom()">Aplicar</button></div>
+    </div>
+    <div style="margin-top:16px">
+      <div class="sumrow"><span>Subtotal</span><span>${brl(subtotal())}</span></div>
+      ${descontoCupom()>0?`<div class="sumrow disc"><span>Cupom ${order.cupom}</span><span>- ${brl(descontoCupom())}</span></div>`:""}
+      ${order.transporte?`<div class="sumrow"><span>Leva e traz</span><span>${brl(taxaTransporte())}</span></div>`:""}
+      <div class="totrow"><span style="font-weight:600">Total</span><span class="tv">${brl(total())}</span></div>
+    </div>
+    <button class="send" id="sendBtn" onclick="enviar()">
+      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.6 14.2c-.2.6-1.2 1.2-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 .9-2.2.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.5.1.3.7 1.1 1.5 1.8 1 .9 1.8 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.5-.1l1.8.9c.2.1.4.2.4.3.1.1.1.6-.1 1.1Z"/></svg>
+      ${s.aberto?'Confirmar agendamento no WhatsApp':'Agendar (respondemos ao abrir)'}</button>
+    <div class="hint">A confirmação do horário é combinada na conversa do WhatsApp. O pagamento é feito no dia, no balcão.</div>`;
+  updateSend();
+}
+
+/* datas: próximos ~14 dias úteis (Seg–Sáb) gerados por JS */
+function dateChips(){
+  const dias=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
+  const meses=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
+  const out=[]; const d=new Date(); d.setHours(0,0,0,0);
+  let found=0, guard=0;
+  while(found<14 && guard<30){
+    if(CONFIG.horario.dias.includes(d.getDay())){
+      const key=d.toISOString().slice(0,10);
+      const label=`${dias[d.getDay()]} ${String(d.getDate()).padStart(2,"0")}/${meses[d.getMonth()]}`;
+      out.push(`<button class="dchip ${order.data===key?'sel':''}" onclick="setData('${key}','${label}')">
+        <span class="dw">${dias[d.getDay()]}</span><span class="dd">${String(d.getDate()).padStart(2,"0")}</span><span class="dm">${meses[d.getMonth()]}</span></button>`);
+      found++;
+    }
+    d.setDate(d.getDate()+1); guard++;
+  }
+  return out.join("");
+}
+function setData(key,label){ order.data=key; order.dataLabel=label; renderCart(); }
+function setHorario(h){ order.horario=h; renderCart(); }
+function toggleTransporte(){ order.transporte=!order.transporte; renderCart(); }
+
+/* ===================== SUGESTÕES / NUDGE (aumentam ticket) ===================== */
+function extrasChips(){
+  // chips do modal: mimos simples de 1 toque + hidratação (abre modal por ter porte)
+  const ids=["hidratacao","perfume","corte-unhas","laco"];
+  return ids.map(id=>{ const x=ALL[id];
+    const label = x.porte ? `+ ${x.n} <b>a partir de ${brl(precoMin(x))}</b>` : `+ ${x.n} <b>${brl(x.p)}</b>`;
+    const act = x.porte ? `openService('${id}')` : `addSimple('${id}')`;
+    return `<button class="sug-chip" onclick="event.stopPropagation();${act}">${label}</button>`;
+  }).join("");
+}
+function suggestBlock(){
+  const has=id=>cart.some(l=>l.id===id);
+  const chips=[];
+  ["hidratacao","corte-unhas","escovacao","perfume","laco"].forEach(id=>{ if(!has(id)) chips.push(ALL[id]); });
+  if(!chips.length) return "";
+  return `<div class="suggest"><b>Complete o dia de spa</b>
+    <div class="sug-row">${chips.map(x=>{
+      const label = x.porte ? `+ ${x.n} <b>a partir de ${brl(precoMin(x))}</b>` : `+ ${x.n} <b>${brl(x.p)}</b>`;
+      const act = x.porte ? `openService('${x.id}')` : `addSimple('${x.id}')`;
+      return `<button class="sug-chip" onclick="${act}">${label}</button>`;
+    }).join("")}</div></div>`;
+}
+function nudgeBlock(){
+  const soBanhoTosa = cart.every(l=>ALL[l.id].catKey==="banho");
+  if(cart.length && soBanhoTosa){
+    return `<div class="frete"><div class="frete-t">Aproveite e agende também um <b>mimo</b> — hidratação, perfume ou corte de unhas deixam o dia de spa completo.</div></div>`;
+  }
+  return "";
+}
+
+function incLine(id){ const l=cart.find(x=>x.lineId===id); if(l){l.qty++;onCartChange();} }
+function decLine(id){ const l=cart.find(x=>x.lineId===id); if(!l)return; l.qty--; if(l.qty<=0)cart=cart.filter(x=>x!==l); onCartChange(); }
+function aplicarCupom(){
+  const code=(document.getElementById("fCupom").value||"").trim().toUpperCase();
+  order.cupom=code;
+  if(CONFIG.cupons[code]){ toast("Cupom aplicado: "+CONFIG.cupons[code].label); } else if(code){ toast("Cupom inválido"); order.cupom=""; }
+  renderCart();
+}
+function updateSend(){ const b=document.getElementById("sendBtn"); if(!b)return;
+  const ok = cart.length && order.data && order.horario && order.tutor.trim() && order.pet.trim() && order.tel.trim();
+  b.disabled=!ok; }
+
+/* ===================== ENVIO WHATSAPP ===================== */
+function enviar(){
+  if(!cart.length){toast("Escolha ao menos um serviço");return;}
+  if(!order.data){toast("Escolha o dia");return;}
+  if(!order.horario){toast("Escolha o horário");return;}
+  if(!order.tutor.trim()){toast("Digite o nome do tutor");return;}
+  if(!order.pet.trim()){toast("Digite o nome do pet");return;}
+  if(!order.tel.trim()){toast("Digite seu WhatsApp");return;}
+  // porte do pet: usa o porte dos serviços; se todos iguais mostra único, senão "vários"
+  const portes=[...new Set(cart.filter(l=>l.porteItem).map(l=>l.porteNome))];
+  const portePet = portes.length===1 ? portes[0] : (portes.length? "vários":"");
+  const L=[];
+  L.push(`*AGENDAMENTO — ${CONFIG.nome}*`); L.push("");
+  L.push(`*Tutor:* ${order.tutor.trim()}`);
+  L.push(`*Pet:* ${order.pet.trim()}`);
+  if(portePet) L.push(`*Porte:* ${portePet}`);
+  L.push(`*WhatsApp:* ${order.tel.trim()}`);
+  L.push(`*Data:* ${order.dataLabel}`);
+  L.push(`*Horário:* ${order.horario}`);
+  if(order.transporte) L.push(`*Leva e traz:* Sim`);
+  L.push(""); L.push("*Serviços:*");
+  cart.forEach(l=>{
+    const porteTxt = l.porteItem ? ` — Porte ${l.porteNome}` : "";
+    L.push(`• ${l.qty>1?l.qty+"x ":""}${l.nome}${porteTxt} — ${brl(l.precoUnit*l.qty)}`);
+    if(l.obs) L.push(`   _${l.obs}_`);
+  });
+  L.push("");
+  L.push(`*Subtotal:* ${brl(subtotal())}`);
+  if(descontoCupom()>0) L.push(`*Cupom ${order.cupom}:* -${brl(descontoCupom())}`);
+  if(order.transporte) L.push(`*Leva e traz:* ${brl(taxaTransporte())}`);
+  L.push(`*Total:* ${brl(total())}`);
+  L.push(""); L.push("_Feito pelo site_");
+  // salva pra "repetir" e dados do tutor
+  localStorage.setItem("pa_last", JSON.stringify({cart, order:{tutor:order.tutor,pet:order.pet,tel:order.tel,transporte:order.transporte,porte:order.porte}}));
+  localStorage.setItem("pa_tutor", order.tutor.trim());
+  localStorage.setItem("pa_pet", order.pet.trim());
+  localStorage.setItem("pa_tel", order.tel.trim());
+  window.open(`https://wa.me/${CONFIG.whatsapp}?text=`+encodeURIComponent(L.join("\n")),"_blank");
+}
+
+/* ===================== REPETIR / DADOS SALVOS ===================== */
+function persistCart(){ localStorage.setItem("pa_cart", JSON.stringify(cart)); }
+function initRepeat(){
+  const tutor=localStorage.getItem("pa_tutor"); if(tutor){ order.tutor=tutor; order.pet=localStorage.getItem("pa_pet")||""; order.tel=localStorage.getItem("pa_tel")||""; }
+  const last=localStorage.getItem("pa_last");
+  if(last){ try{ const d=JSON.parse(last); if(d.cart&&d.cart.length){
+    const btn=document.getElementById("repeatBtn"); btn.style.display="block";
+    const resumo=d.cart.map(l=>(l.qty>1?l.qty+"x ":"")+l.nome).slice(0,2).join(", ");
+    btn.innerHTML=`🔁 Repetir último agendamento <b>· ${resumo}${d.cart.length>2?"…":""}</b>`;
+  }}catch(e){} }
+}
+function repeatLast(){
+  const last=localStorage.getItem("pa_last"); if(!last)return;
+  try{ const d=JSON.parse(last); cart=d.cart.map(l=>({...l,lineId:"L"+Date.now()+Math.round(Math.random()*9999)}));
+    if(d.order){ order.tutor=d.order.tutor||order.tutor; order.pet=d.order.pet||order.pet; order.tel=d.order.tel||order.tel; order.transporte=!!d.order.transporte; order.porte=d.order.porte||order.porte; }
+    order.data=""; order.dataLabel=""; order.horario=""; // escolher nova data/horário
+    onCartChange(); openCart(); toast("Serviços carregados — escolha a nova data");
+  }catch(e){}
+}
+
+/* ===================== DEEP LINK ?servico= ===================== */
+function initDeepLink(){
+  const p=new URLSearchParams(location.search).get("servico");
+  if(p && ALL[p]){ setTimeout(()=>{ if(ALL[p].porte) openService(p); else { addSimple(p); openCart(); } },350); }
+}
+
+/* ===================== SCROLLSPY ===================== */
+function initSpy(){
+  const links=[...document.querySelectorAll(".nav a")];
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+    links.forEach(l=>l.classList.toggle("active",l.dataset.cid===e.target.id));
+    const al=links.find(l=>l.dataset.cid===e.target.id); if(al)al.scrollIntoView({inline:"center",block:"nearest"});
+  }})},{rootMargin:"-45% 0px -50% 0px"});
+  document.querySelectorAll(".sec").forEach(s=>io.observe(s));
+}
+
+/* ===================== PWA ===================== */
+let deferredPrompt=null;
+const ehMobile = window.matchMedia("(max-width: 768px)").matches || window.matchMedia("(pointer: coarse)").matches;
+window.addEventListener("beforeinstallprompt",e=>{ e.preventDefault(); deferredPrompt=e; if(ehMobile){ document.getElementById("pwaBar").style.display="flex"; } });
+function installPWA(){ if(!deferredPrompt)return; deferredPrompt.prompt(); deferredPrompt=null; document.getElementById("pwaBar").style.display="none"; }
+if("serviceWorker" in navigator){ window.addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{})); }
+
+/* ===================== TOAST ===================== */
+let tt; function toast(m){ const t=document.getElementById("toast"); t.textContent=m; t.classList.add("on"); clearTimeout(tt); tt=setTimeout(()=>t.classList.remove("on"),1700); }
+
+renderMeta(); render(); initSpy(); initRepeat(); initDeepLink();
+setInterval(renderMeta,60000);
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":["PetStore","HealthAndBeautyBusiness"],
+  "name":"Pet Amigo — Banho & Tosa",
+  "description":"Banho e tosa com agendamento online. Escolha o serviço, o porte do pet, a data e o horário.",
+  "image":"https://SEU-DOMINIO.com.br/og.jpg",
+  "url":"https://SEU-DOMINIO.com.br/",
+  "telephone":"+SEU_WHATSAPP",
+  "priceRange":"$$",
+  "address":{"@type":"PostalAddress","streetAddress":"Rua das Acácias, 145","addressLocality":"Vila Aurora","addressCountry":"BR"},
+  "openingHoursSpecification":[
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"18:00"}
+  ],
+  "makesOffer":[
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Banho"},"priceCurrency":"BRL","priceSpecification":{"@type":"PriceSpecification","minPrice":"40","maxPrice":"75"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Tosa higiênica"},"priceCurrency":"BRL","priceSpecification":{"@type":"PriceSpecification","minPrice":"35","maxPrice":"60"}},
+    {"@type":"Offer","itemOffered":{"@type":"Service","name":"Banho + Tosa completa"},"priceCurrency":"BRL","priceSpecification":{"@type":"PriceSpecification","minPrice":"70","maxPrice":"130"}}
+  ]
+}
+</script>
+</body>
+</html>
